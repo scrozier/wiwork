@@ -1,5 +1,6 @@
-require "wiwork/version"
-
-module Wiwork
-  # Your code goes here...
-end
+require 'wiwork/availability_item'
+require 'wiwork/location'
+require 'wiwork/position'
+require 'wiwork/user'
+require 'wiwork/utility_classes'
+require 'wiwork/connection'
