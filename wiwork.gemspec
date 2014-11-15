@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
   spec.name          = "wiwork"
-  spec.version       = '0.0.1'
+  spec.version       = '0.0.2'
   spec.authors       = ["Steve Crozier"]
   spec.email         = ["steve@crozier.com"]
   spec.summary       = %q{Robust wrapper for the WhenIWork API.}
@@ -18,8 +18,13 @@ Gem::Specification.new do |spec|
                         'lib/wiwork/location.rb',
                         'lib/wiwork/availability_item.rb',
                         'lib/wiwork/utility_classes.rb',
+                        'lib/wiwork/methods/availabilities.rb',
+                        'lib/wiwork/methods/locations.rb',
+                        'lib/wiwork/methods/positions.rb',
+                        'lib/wiwork/methods/shifts.rb',
                         'lib/wiwork/methods/users.rb',
                         'lib/wiwork/connection.rb']
+
   # spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   # spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
