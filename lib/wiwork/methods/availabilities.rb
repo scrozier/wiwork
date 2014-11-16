@@ -26,10 +26,6 @@ module WhenIWork
       return availabilities
     end
 
-    # not sure how to handle this; i was going to do a lazy load from
-    # availabilities, but it looks like you have to specify time frame;
-    # i guess it can always take the time parameters....?
-    #
     # this endpoint *can* be called without a user_id, which appears to
     # return availability_items for all users
     def availability_items(user_ids=nil, start_datetime=nil, end_datetime=nil)

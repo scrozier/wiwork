@@ -11,6 +11,7 @@ module WhenIWork
       @token = token
       @positions = {}
       @locations = {}
+      @users = {}
     end
 
   end

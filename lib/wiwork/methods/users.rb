@@ -12,6 +12,13 @@ module WhenIWork
       return users
     end
 
+    def get_existing_user(id)
+      return @users[id] if @users[id]
+      response = HTTParty.get BASE_URL + "users/#{id}", headers: {"W-Token" => @token}
+      return nil unless response.code == 200
+      @users[id] = User.new(self, response.parsed_response['user'])
+    end
+
   end
 
 end
