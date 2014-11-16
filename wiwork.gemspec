@@ -16,6 +16,7 @@ Gem::Specification.new do |spec|
                         'lib/wiwork/user.rb',
                         'lib/wiwork/position.rb',
                         'lib/wiwork/location.rb',
+                        'lib/wiwork/availability.rb',
                         'lib/wiwork/availability_item.rb',
                         'lib/wiwork/utility_classes.rb',
                         'lib/wiwork/methods/availabilities.rb',

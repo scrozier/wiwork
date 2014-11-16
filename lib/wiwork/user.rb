@@ -24,6 +24,8 @@ module WhenIWork
       :login_email, :positions, :locations, :position_rates, :position_quality,
       :sort
     def initialize(connection, api_hash)
+      @connection = connection
+
       @created_at = DateTime.parse(api_hash.delete('created_at'))
       @updated_at = DateTime.parse(api_hash.delete('updated_at'))
 
@@ -39,6 +41,8 @@ module WhenIWork
         @locations << connection.get_location(location_id)
       end
 
+      @availabilities = nil
+
       avatar_hash = api_hash.delete('avatar')
       @avatar = Avatar.new(avatar_hash)
       
@@ -46,6 +50,15 @@ module WhenIWork
         instance_variable_set "@#{k}".to_sym, v
       end
     end
+
+    # availabilities is initialized to nil; the first time it is invoked,
+    # it hits the api and retrieves the availabilities as an array (which
+    # may be empty) into @availabilities
+    def availabilities
+      return @availabilities if @availabilities
+      @availabilities = @connection.availabilities(self.id)
+    end
+
   end
 
 end
