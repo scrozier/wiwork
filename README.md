@@ -34,9 +34,9 @@ Having established a connection, access WhenIWork API endpoints via methods on t
 The methods are listed here:
 
 * users
-** user.locations
-** user.positions
-** user.availabilities (extended association)
+	* user.locations
+	* user.positions
+	* user.availabilities (extended association)
 
 ## Notes
 
