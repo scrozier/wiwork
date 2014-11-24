@@ -1,13 +1,7 @@
-require 'wiwork/utility_classes'
-require 'wiwork/connection'
-require 'wiwork/availability'
-require 'wiwork/availability_item'
-require 'wiwork/location'
-require 'wiwork/position'
-require 'wiwork/shift'
-require 'wiwork/user'
-require 'wiwork/methods/availabilities'
-require 'wiwork/methods/locations'
-require 'wiwork/methods/positions'
-require 'wiwork/methods/shifts'
-require 'wiwork/methods/users'
+Dir[File.dirname(__FILE__) + '/wiwork/*.rb'].each do |file|
+  require file
+end
+
+Dir[File.dirname(__FILE__) + '/wiwork/methods/*.rb'].each do |file|
+  require file
+end
