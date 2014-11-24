@@ -3,20 +3,18 @@ module WhenIWork
   class Connection
     
     def positions
-      response = HTTParty.get BASE_URL + 'positions', headers: {"W-Token" => @token}
-      return nil unless response.code == 200
+      parsed_response = wiwapi :get, 'positions'
       positions = []
-      for position_hash in response.parsed_response['positions']
-        positions << Position.new(position_hash)
+      for position_hash in parsed_response['positions']
+        positions << Position.new(self, position_hash)
       end
       return positions
     end
 
     def get_position(id)
       return @positions[id] if @positions[id]
-      response = HTTParty.get BASE_URL + "positions/#{id}", headers: {"W-Token" => @token}
-      return nil unless response.code == 200
-      @positions[id] = Position.new(response.parsed_response['position'])
+      parsed_response = wiwapi :get, "positions/#{id}"
+      @positions[id] = Position.new(self, parsed_response['position'])
     end
 
   end

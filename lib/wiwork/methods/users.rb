@@ -3,10 +3,9 @@ module WhenIWork
   class Connection
     
     def users
-      response = HTTParty.get BASE_URL + 'users', headers: {"W-Token" => @token}
-      return nil unless response.code == 200
+      parsed_response = wiwapi :get, 'users'
       users = []
-      for user_hash in response.parsed_response['users']
+      for user_hash in parsed_response['users']
         users << User.new(self, user_hash)
       end
       return users
@@ -14,9 +13,8 @@ module WhenIWork
 
     def get_existing_user(id)
       return @users[id] if @users[id]
-      response = HTTParty.get BASE_URL + "users/#{id}", headers: {"W-Token" => @token}
-      return nil unless response.code == 200
-      @users[id] = User.new(self, response.parsed_response['user'])
+      parsed_response = wiwapi :get, "users/#{id}"
+      @users[id] = User.new(self, parsed_response['user'])
     end
 
   end

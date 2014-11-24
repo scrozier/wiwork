@@ -15,12 +15,9 @@ module WhenIWork
         query_string = "user_id=#{user_ids}"
       end 
 
-      request_url = BASE_URL + URI.encode("availabilities#{query_string}")
-      response = HTTParty.get request_url,
-        headers: {"W-Token" => @token}
-      return nil unless response.code == 200
+      parsed_response = wiwapi :get, URI.encode("availabilities#{query_string}")
       availabilities = []
-      for availability_hash in response.parsed_response['availabilities']
+      for availability_hash in parsed_response['availabilities']
         availabilities << Availability.new(self, availability_hash)
       end
       return availabilities
@@ -50,16 +47,9 @@ module WhenIWork
 
       query_string = query_params.empty? ? '' : '?' + query_params.collect{|p| "#{p}"}.join('&')
 
-      request_url = BASE_URL + URI.encode("availabilities/items#{query_string}")
-      puts request_url
-      response = HTTParty.get request_url,
-        headers: {"W-Token" => @token}
-      if response.code != 200
-        parsed_response = response.parsed_response
-        raise WhenIWork::WIWAPIError, "#{parsed_response['code']} #{parsed_response['error']}"
-      end
+      parsed_response = wiwapi :get, URI.encode("availabilities/items#{query_string}")
       availability_items = []
-      for availability_items_hash in response.parsed_response['availabilityitems']
+      for availability_items_hash in parsed_response['availabilityitems']
         availability_items << AvailabilityItem.new(self, availability_items_hash)
       end
       return availability_items

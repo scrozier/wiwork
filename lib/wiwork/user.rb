@@ -13,11 +13,11 @@ module WhenIWork
     # "new_employee"=>{"sms"=>false, "email"=>true}
     # "attendance"=>{"sms"=>false, "email"=>false}}
 
-    # "avatar"=>{"url"=>"http://avatar.wheniwork.com/wiw/1700404.png?s=%s&t=1700404", "size"=>"%s"},
+    # avatar is not currently supported for external use
     class User
       attr_reader :id, :login_id, :timezone_id, :country_id,
         :migration_id, :role, :is_payroll, :is_trusted, :type, :email,
-        :first_name, :last_name, :phone_number, :employee_code, :avatar,
+        :first_name, :last_name, :phone_number, :employee_code,
         :password, :activated, :is_hidden, :uuid, :notes, :affiliate,
         :is_private, :infotips, :hours_preferred, :hours_max, :hourly_rate,
         :alert_settings, :reminder_time, :sleep_start, :sleep_end, :my_positions,
@@ -44,8 +44,7 @@ module WhenIWork
 
         @availabilities = nil
 
-        avatar_hash = api_hash.delete('avatar')
-        @avatar = Avatar.new(avatar_hash)
+        api_hash.delete('avatar') # see note above
         
         api_hash.each do |k, v|
           instance_variable_set "@#{k}".to_sym, v

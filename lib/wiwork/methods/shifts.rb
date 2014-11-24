@@ -3,9 +3,11 @@ module WhenIWork
   class Connection
     
     def create_shift(location_id, start_time, end_time, notes)
-      response = HTTParty.post BASE_URL + 'shifts',
-        body: {location_id: location_id, start_time: start_time, end_time: end_time, notes: notes}.to_json,
-        headers: {"W-Token" => @token}
+      parsed_response = wiwapi :post, 'shifts',
+        {location_id: location_id, start_time: start_time, end_time: end_time, notes: notes}
+      shift = Shift.new(self, parsed_response['shift'])
+      @shifts[shift.id] = shift
+      return shift
     end
 
   end

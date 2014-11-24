@@ -4,20 +4,18 @@ module WhenIWork
     
     # this may be pretty close to production-ready
     def locations
-      response = HTTParty.get BASE_URL + 'locations', headers: {"W-Token" => @token}
-      return nil unless response.code == 200
+      parsed_response = wiwapi :get, 'locations'
       locations = []
-      for location_hash in response.parsed_response['locations']
-        locations << Location.new(location_hash)
+      for location_hash in parsed_response['locations']
+        locations << Location.new(self, location_hash)
       end
       return locations
     end
 
     def get_location(id)
       return @locations[id] if @locations[id]
-      response = HTTParty.get BASE_URL + "locations/#{id}", headers: {"W-Token" => @token}
-      return nil unless response.code == 200
-      @locations[id] = Location.new(response.parsed_response['location'])
+      parsed_response = wiwapi :get, "locations/#{id}"
+      @locations[id] = Location.new(self, parsed_response['location'])
     end
 
   end
