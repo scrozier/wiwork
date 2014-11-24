@@ -2,10 +2,7 @@ module WhenIWork
 
   class Connection
     
-    # this endpoint, with no query string, appears to return a single
-    # availability...don't know which one it is; so essentially, I'm going
-    # to treat user_ids as required
-    def availabilities(user_ids)
+    def list_availabilities(user_ids)
       raise ArgumentError unless user_ids
       query_params = []
 
@@ -15,7 +12,7 @@ module WhenIWork
         query_string = "user_id=#{user_ids}"
       end 
 
-      parsed_response = wiwapi :get, URI.encode("availabilities#{query_string}")
+      parsed_response = wiwapi :get, URI.encode("availabilities?#{query_string}")
       availabilities = []
       for availability_hash in parsed_response['availabilities']
         availabilities << Availability.new(self, availability_hash)

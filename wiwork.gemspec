@@ -3,14 +3,14 @@ lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 
 Gem::Specification.new do |spec|
-  spec.name          = "wiwork"
+  spec.name          = 'wiwork'
   spec.version       = '0.0.2'
-  spec.authors       = ["Steve Crozier"]
-  spec.email         = ["steve@crozier.com"]
+  spec.authors       = ['Steve Crozier']
+  spec.email         = ['steve@crozier.com']
   spec.summary       = %q{Robust wrapper for the WhenIWork API.}
   spec.description   = %q{Vision for wiwork is to wrap all the API endpoints and provide rich, plain old Ruby objects for all the WhenIWork entities (shifts, users, positions, etc.)}
-  spec.homepage      = ""
-  spec.license       = "MIT"
+  spec.homepage      = ''
+  spec.license       = 'MIT'
 
   spec.files         = ['lib/wiwork.rb',
                         'lib/wiwork/user.rb',
@@ -29,10 +29,13 @@ Gem::Specification.new do |spec|
 
   # spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   # spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
-  spec.require_paths = ["lib"]
+  spec.require_paths = ['lib']
 
-  spec.add_development_dependency "bundler", "~> 1.6"
-  spec.add_development_dependency "rake"
+  spec.add_development_dependency 'bundler', '~> 1.6'
+  spec.add_development_dependency 'rake'
+  spec.add_development_dependency 'webmock'
+  spec.add_development_dependency 'vcr'
+  spec.add_development_dependency 'turn'
 
   spec.add_dependency 'httparty'
 end
