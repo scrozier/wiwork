@@ -38,6 +38,12 @@ The methods are listed here:
 	* user.positions
 	* user.availabilities (extended association)
 
+### Logging
+
+[Some general info about logging here.]
+
+When running tests, using --trace on your *rake* command will result in the logging of *wiwork* requests and responses, which can be very useful for debugging.
+
 ## Notes
 
 ## Contributing

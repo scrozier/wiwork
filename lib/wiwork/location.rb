@@ -12,5 +12,11 @@ module WhenIWork
         instance_variable_set "@#{k}".to_sym, v
       end
     end
+
+    def delete
+      parsed_response = @connection.wiwapi :delete, "locations/#{self.id}"
+      @connection.locations.delete self.id
+    end
+
   end
 end
