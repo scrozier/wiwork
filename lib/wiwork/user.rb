@@ -1,19 +1,5 @@
 module WhenIWork
   class Connection
-
-    # "position_rates"=>{"874255"=>0}
-    # "position_quality"=>{"874255"=>3}
-    # "sort"=>{"301570"=>0}}
-    # "alert_settings"=>{"timeoff"=>{"sms"=>false, "email"=>true}}
-
-    # "swaps"=>{"sms"=>false, "email"=>true}
-    # "schedule"=>{"sms"=>false, "email"=>true}
-    # "reminders"=>{"sms"=>false, "email"=>true}
-    # "availability"=>{"sms"=>false, "email"=>true}
-    # "new_employee"=>{"sms"=>false, "email"=>true}
-    # "attendance"=>{"sms"=>false, "email"=>false}}
-
-    # avatar is not currently supported for external use
     class User
 
       attr_reader :id, :first_name, :last_name, :email, :phone_number,
@@ -21,9 +7,6 @@ module WhenIWork
       
       def initialize(connection, api_hash)
         @connection = connection
-
-        @created_at = DateTime.parse(api_hash.delete('created_at'))
-        @updated_at = DateTime.parse(api_hash.delete('updated_at'))
 
         # direct associations
 
@@ -37,8 +20,6 @@ module WhenIWork
 
         @availabilities = nil
 
-        api_hash.delete('avatar') # see note above
-        
         # we're saving all the fields from the API response, but note that
         # we only have attr_readers for those listed in the API doc
         api_hash.each do |k, v|
@@ -70,6 +51,5 @@ module WhenIWork
       end
 
     end
-
   end
 end

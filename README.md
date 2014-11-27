@@ -29,14 +29,29 @@ Or install it yourself as:
 
 	when_i_work = WhenIWork::Connection.new(TOKEN)
 
-Having established a connection, access WhenIWork API endpoints via methods on the connection that generally match the name of the API objects (users, locations, etc.). Plural object names (users, e.g.) are arrays of the underlying object. The underlying objects are POR (Plain Old Ruby) objects.
+Having established a connection, access WhenIWork API endpoints via methods on the connection that generally match the name of the API objects (users, locations, etc.). Plural object names (users, e.g.) are arrays of the underlying object. The underlying objects are POR (Plain Old Ruby) objects. You can access their attributes via reader methods. For example, you can use Location#name.
 
-The methods are listed here:
+Some notes on method names:
+
+* I have generally mimicked the WhenIWork API endpoint names, with a few exceptions:
+  * "Listing _______" becomes just _______ (the object, like *locations* or *swaps*)
+  * The word "existing" is eliminated, so the API's "Get Existing Location" becomes get_location
+
+The methods:
 
 * users
 	* user.locations
 	* user.positions
 	* user.availabilities (extended association)
+
+* Positions
+
+* Locations
+  * locations() (array of WhenIWork::Location objects)
+  * get_location(id) -> WhenIWork::Location
+  * create_location(hash_of_attributes) -> WhenIWork::Location
+  * update_location(hash_of_attributes) -> WhenIWork::Location
+  * delete_location(id) -> boolean
 
 ### Logging
 

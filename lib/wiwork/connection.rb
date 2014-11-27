@@ -7,10 +7,12 @@ module WhenIWork
 
     BASE_URL = 'https://api.wheniwork.com/2/'
 
+    attr_accessor :locations
+
     def initialize(token)
       @token = token
       @positions = {}
-      @locations = {}
+      @locations = nil
       @users = {}
       @shifts = {}
     end
@@ -21,9 +23,9 @@ module WhenIWork
       options[:body] = body.to_json if body     # this handles params for POSTs and PUTs
 
       if defined? logger
-        logger.tagged('wiwapi request') { logger.debug "#{url_end}, body=#{options[:body]}" }
+        logger.tagged('wiwapi request') { logger.debug "#{verb.to_s.upcase} #{url_end}, body=#{options[:body]}" }
       else
-        puts "wiwapi request: #{url_end}, body=#{options[:body]}"
+        puts "wiwapi request: #{verb.to_s.upcase} #{url_end}, body=#{options[:body]}"
       end
 
       response = HTTParty.send(verb, BASE_URL + url_end, options)

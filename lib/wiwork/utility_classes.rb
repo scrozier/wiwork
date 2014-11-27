@@ -6,6 +6,9 @@ module WhenIWork
     end
   end
 
+  class WIWorkError < StandardError
+  end
+
   class WIWAPIError < StandardError
   end
 
