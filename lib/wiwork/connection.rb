@@ -23,9 +23,9 @@ module WhenIWork
       options[:body] = body.to_json if body     # this handles params for POSTs and PUTs
 
       if defined? logger
-        logger.tagged('wiwapi request') { logger.debug "#{verb.to_s.upcase} #{url_end}, body=#{options[:body]}" }
+        logger.tagged("wiwapi request") { logger.debug "#{verb.to_s.upcase} #{url_end}, body=#{options[:body]}" }
       else
-        puts "wiwapi request: #{verb.to_s.upcase} #{url_end}, body=#{options[:body]}"
+        puts "\nwiwapi request: #{verb.to_s.upcase} #{url_end}, body=#{options[:body]}"
       end
 
       response = HTTParty.send(verb, BASE_URL + url_end, options)
@@ -33,7 +33,7 @@ module WhenIWork
       if defined? logger
         logger.tagged('wiwapi response') { logger.debug response.inspect }
       else
-        puts "wiwapi response: #{response.inspect}"
+        puts "\nwiwapi response: #{response.inspect}"
       end
 
       parsed_response = response.parsed_response

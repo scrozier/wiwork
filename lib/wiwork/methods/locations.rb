@@ -4,7 +4,7 @@ module WhenIWork
     
     # this may be pretty close to production-ready
     def locations
-      return @locations if @locations
+      return @locations.values if @locations
       parsed_response = wiwapi :get, 'locations'
       @locations = {}
       for location_hash in parsed_response['locations']

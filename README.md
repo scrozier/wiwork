@@ -47,11 +47,21 @@ The methods:
 * Positions
 
 * Locations
-  * locations() (array of WhenIWork::Location objects)
+  * locations -> array of WhenIWork::Location objects
   * get_location(id) -> WhenIWork::Location
   * create_location(hash_of_attributes) -> WhenIWork::Location
   * update_location(hash_of_attributes) -> WhenIWork::Location
   * delete_location(id) -> boolean
+
+### Notes on Locations:
+
+#### Latitude and longitude
+
+When one adds a location directly through the WhenIWork web application, latitude and longitude coordinates are discovered and added to the Location record. When one adds a location via the API, coordinates are not discovered and added to the Location record. One can set those coordinates oneself, in a create_location or update_location call.
+
+When specifying latitude and longitude in a create_location or update_location call, they should be specified as an Array of two Floats. I.e., [latitude, longitude]. For example, [32.829001, -96.748154].
+
+IMPORTANT: as of *wiwork 0.0.2*, updating latitude and longitude via the WhenIWork API does not seem to work, and so is unsupported.
 
 ### Logging
 

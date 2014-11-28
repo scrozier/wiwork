@@ -1,20 +1,17 @@
 module WhenIWork
+
   class Location
-    attr_reader :id, :is_default, :name, :sort, :max_hours, :address,
-      :coordinates, :latitude, :longitude, :ip_address, :is_deleted
 
     def initialize(connection, api_hash)
       @connection = connection
+      @created_at = DateTime.parse(api_hash.delete('created_at'))
+      @updated_at = DateTime.parse(api_hash.delete('updated_at'))
       api_hash.each do |k, v|
         instance_variable_set "@#{k}".to_sym, v
+        define_singleton_method(k) { instance_variable_get "@#{k}" }
       end
     end
 
-    # not sure this belongs here
-    # def delete
-    #   parsed_response = @connection.wiwapi :delete, "locations/#{self.id}"
-    #   @connection.locations.delete self.id
-    # end
-
   end
+
 end
