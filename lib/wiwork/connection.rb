@@ -11,6 +11,8 @@ module WhenIWork
 
     def initialize(token)
       @token = token
+      test_connection_and_authentication
+
       @positions = {}
       @locations = nil
       @users = {}
@@ -43,6 +45,23 @@ module WhenIWork
       end
       
       return parsed_response
+    end
+
+    private
+
+    def test_connection_and_authentication
+      # test connection/authentication so that we fail early, if necessary;
+      # use this call, which should succeed on the authentication level,
+      # but not return a big response (using locations/0 seems to return
+      # all locations)
+      options = {}
+      options[:headers] = {"W-Token" => @token}
+      response = HTTParty.send(:get, BASE_URL + 'locations/1', options)
+      # if we're authenticating OK, should get a 4003 code from API
+      parsed_response = response.parsed_response      
+      unless parsed_response['code'] == '4003'
+        raise WIWorkError, 'Unable to connect to WhenIWork API; probably a bad token'
+      end
     end
 
   end

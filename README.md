@@ -23,11 +23,17 @@ Or install it yourself as:
 
 ## Usage
 
+### Authentication
+
 * You must first obtain a token for the WhenIWork API. Follow the instructions at <http://dev.wheniwork.com/#authentication>.
 
 * Armed with your token, you can establish a *wiwork* connection. A *wiwork* connection caches objects retrieved from the API. Consequently, if you want to break the cache and re-retrieve objects from the API, you can establish a new session.
 
-	when_i_work = WhenIWork::Connection.new(TOKEN)
+	when_i_work = WhenIWork::Connection.new('ilovemyboss')
+
+Substitute in your own token for 'ilovemyboss', above.
+
+### Accessing API endpoints via *wiwork*
 
 Having established a connection, access WhenIWork API endpoints via methods on the connection that generally match the name of the API objects (users, locations, etc.). Plural object names (users, e.g.) are arrays of the underlying object. The underlying objects are POR (Plain Old Ruby) objects. You can access their attributes via reader methods. For example, you can use Location#name.
 
@@ -46,22 +52,25 @@ The methods:
 
 * Positions
 
-* Locations
+#### Locations
+
   * locations -> array of WhenIWork::Location objects
   * get_location(id) -> WhenIWork::Location
   * create_location(hash_of_attributes) -> WhenIWork::Location
   * update_location(hash_of_attributes) -> WhenIWork::Location
   * delete_location(id) -> boolean
 
-### Notes on Locations:
-
-#### Latitude and longitude
+##### Latitude and longitude
 
 When one adds a location directly through the WhenIWork web application, latitude and longitude coordinates are discovered and added to the Location record. When one adds a location via the API, coordinates are not discovered and added to the Location record. One can set those coordinates oneself, in a create_location or update_location call.
 
 When specifying latitude and longitude in a create_location or update_location call, they should be specified as an Array of two Floats. I.e., [latitude, longitude]. For example, [32.829001, -96.748154].
 
 IMPORTANT: as of *wiwork 0.0.2*, updating latitude and longitude via the WhenIWork API does not seem to work, and so is unsupported.
+
+##### Eager loading
+
+Note than any use of any of the locations methods will result in *wiwork* eager loading all the locations from the API. Subsequent calls to any of the read-only locations methods (locations, get_location) will be handled out of *wiwork*'s cache created on the first hit.
 
 ### Logging
 
