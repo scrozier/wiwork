@@ -31,11 +31,10 @@ Gem::Specification.new do |spec|
   # spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'bundler', '~> 1.6'
-  spec.add_development_dependency 'rake'
-  spec.add_development_dependency 'webmock'
-  spec.add_development_dependency 'vcr'
-  spec.add_development_dependency 'turn'
+  spec.add_development_dependency 'bundler', '~>  1.6'
+  spec.add_development_dependency 'rake',    '~> 10.4'
+  spec.add_development_dependency 'webmock', '~>  1.20'
+  spec.add_development_dependency 'vcr',     '~>  2.9'
 
-  spec.add_dependency 'httparty'
+  spec.add_dependency 'httparty', '~> 0.13'
 end
