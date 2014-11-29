@@ -26,7 +26,7 @@ module WhenIWork
 
       if defined? logger
         logger.tagged("wiwapi request") { logger.debug "#{verb.to_s.upcase} #{url_end}, body=#{options[:body]}" }
-      else
+      elsif WhenIWork.configuration.logging
         puts "\nwiwapi request: #{verb.to_s.upcase} #{url_end}, body=#{options[:body]}"
       end
 
@@ -34,7 +34,7 @@ module WhenIWork
 
       if defined? logger
         logger.tagged('wiwapi response') { logger.debug response.inspect }
-      else
+      elsif WhenIWork.configuration.logging
         puts "\nwiwapi response: #{response.inspect}"
       end
 

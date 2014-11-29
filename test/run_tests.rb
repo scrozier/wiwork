@@ -11,6 +11,10 @@ class WhenIWork::Connection
   TOKEN = ENV['WIW_API_TOKEN']
 end
 
+WhenIWork.configure do |config|
+  config.logging = true
+end
+
 if __FILE__ == $0
   $LOAD_PATH.unshift('lib', 'test')
   Dir.glob('./test/**/test*.rb') {|f| require f}
