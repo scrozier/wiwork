@@ -11,12 +11,4 @@ class WIWAPIObject
     end
   end
 
-  def method_missing(name, *args, &block)
-    instance_variable_get "@#{name}"
-  end
-
-  def respond_to?(name)
-    true
-  end
-
 end
