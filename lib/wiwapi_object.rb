@@ -1,0 +1,2 @@
+class WIWAPIObject
+end

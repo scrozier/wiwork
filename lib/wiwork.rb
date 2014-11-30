@@ -1,3 +1,5 @@
+require File.dirname(__FILE__) + '/wiwapi_object'
+
 Dir[File.dirname(__FILE__) + '/wiwork/*.rb'].each do |file|
   require file
 end
