@@ -1,18 +1,13 @@
 module WhenIWork
-  class Shift
-    attr_reader :id, :start_time, :end_time, :notes, :created_at, :updated_at
+  class Shift < WIWAPIObject
 
-    def initialize(connection, api_hash)
-      @connection = connection
+    attr_reader :id, :user_id, :location_id, :position_id, :site_id,
+      :start_time, :end_time, :break_time, :color, :notes, :published,
+      :notified_at, :created_at, :updated_at
 
-      @created_at = DateTime.parse(api_hash.delete('created_at'))
-      @updated_at = DateTime.parse(api_hash.delete('updated_at'))
-      @start_time = DateTime.parse(api_hash.delete('start_time'))
-      @end_time = DateTime.parse(api_hash.delete('end_time'))
-      
-      api_hash.each do |k, v|
-        instance_variable_set "@#{k}".to_sym, v
-      end
+    def self.date_time_attributes
+      [:start_time, :end_time, :notified_at]
     end
+
   end
 end

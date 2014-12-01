@@ -17,8 +17,8 @@ class TestLocations < MiniTest::Unit::TestCase
       headquarters_id = connection.locations.first.id
 
       # set that location to a known set of attributes
-      headquarters_latitude = 32.829001
-      headquarters_longitude = -96.748154
+      headquarters_latitude = 40.748238
+      headquarters_longitude = -73.985184
       headquarters = connection.update_location(headquarters_id,
         name: 'New York Headquarters (Empire State Building)',
         address: '350 5th Ave, New York, NY 10118',
@@ -45,9 +45,9 @@ class TestLocations < MiniTest::Unit::TestCase
       southeast = location
 
       # check coordinates - CURRENTLY NOT WORKING, SEE WhenIWork Request #32387
-      # location = connection.get_location(headquarters_id)
-      # assert_equal headquarters_latitude, location.coordinates.first
-      # assert_equal headquarters_longitude, location.coordinates.last
+      location = connection.get_location(headquarters_id)
+      assert_equal headquarters_latitude, location.coordinates.first
+      assert_equal headquarters_longitude, location.coordinates.last
 
       # move this location to the west (test update_location)
       western_values = {

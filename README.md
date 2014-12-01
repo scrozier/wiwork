@@ -64,9 +64,7 @@ The methods:
 
 When one adds a location directly through the WhenIWork web application, latitude and longitude coordinates are discovered and added to the Location record. When one adds a location via the API, coordinates are not discovered and added to the Location record. One can set those coordinates oneself, in a create_location or update_location call.
 
-When specifying latitude and longitude in a create_location or update_location call, they should be specified as an Array of two Floats. I.e., [latitude, longitude]. For example, [32.829001, -96.748154].
-
-IMPORTANT: as of *wiwork 0.0.2*, updating latitude and longitude via the WhenIWork API does not seem to work, and so is unsupported.
+When specifying latitude and longitude in a create_location or update_location call, they should be specified as an Array of two Floats. I.e., [latitude, longitude]. For example, [32.829001, -96.748154]. Note that it appears that the coordinates must match Google Maps' latitude and longitude for the address exactly, or they (the coordinates) will not be stored.
 
 ##### Eager loading
 

@@ -1,0 +1,792 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.wheniwork.com/2/locations/1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 404
+      message: Not Found
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Mon, 01 Dec 2014 22:04:32 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      W-Limit-Remaining:
+      - '99'
+    body:
+      encoding: UTF-8
+      string: '{"error":"No location found","code":"4003"}'
+    http_version: 
+  recorded_at: Mon, 01 Dec 2014 22:04:32 GMT
+- request:
+    method: get
+    uri: https://api.wheniwork.com/2/locations
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Mon, 01 Dec 2014 22:04:32 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      W-Limit-Remaining:
+      - '99'
+    body:
+      encoding: UTF-8
+      string: '{"locations":[{"id":343075,"account_id":193849,"is_default":0,"name":"New
+        York Headquarters (Empire State Building)","sort":0,"max_hours":0,"address":"350
+        5th Ave, New York, NY 10118","coordinates":[40.748238,-73.985184],"latitude":40.748238,"longitude":-73.985184,"ip_address":"","created_at":"Sun,
+        30 Nov 2014 13:21:31 -0600","updated_at":"Mon, 01 Dec 2014 16:04:23 -0600","is_deleted":false,"radius":100}]}'
+    http_version: 
+  recorded_at: Mon, 01 Dec 2014 22:04:32 GMT
+- request:
+    method: get
+    uri: https://api.wheniwork.com/2/shifts?end=2014-12-08%2000:00:00%20-0600&location_id=343075&start=2014-12-01%2000:00:00%20-0600
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Mon, 01 Dec 2014 22:04:33 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      W-Limit-Remaining:
+      - '99'
+    body:
+      encoding: UTF-8
+      string: '{"start":"Mon, 01 Dec 2014 00:00:00 -0600","end":"Mon, 08 Dec 2014
+        00:00:00 -0600","shifts":[]}'
+    http_version: 
+  recorded_at: Mon, 01 Dec 2014 22:04:33 GMT
+- request:
+    method: get
+    uri: https://api.wheniwork.com/2/shifts?end=2014-12-08%2000:00:00%20-0600&location_id=343075&start=2014-12-01%2000:00:00%20-0600
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Mon, 01 Dec 2014 22:04:34 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      W-Limit-Remaining:
+      - '99'
+    body:
+      encoding: UTF-8
+      string: '{"start":"Mon, 01 Dec 2014 00:00:00 -0600","end":"Mon, 08 Dec 2014
+        00:00:00 -0600","shifts":[]}'
+    http_version: 
+  recorded_at: Mon, 01 Dec 2014 22:04:34 GMT
+- request:
+    method: post
+    uri: https://api.wheniwork.com/2/shifts
+    body:
+      encoding: UTF-8
+      string: '{"location_id":343075,"start_time":"2014-12-01 08:00:00 -0600","end_time":"2014-12-01
+        12:00:00 -0600","notes":"Shift 0/8"}'
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Mon, 01 Dec 2014 22:04:35 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"shift":{"id":81189691,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Mon,
+        01 Dec 2014 08:00:00 -0600","end_time":"Mon, 01 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        0\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
+        01 Dec 2014 16:04:35 -0600","updated_at":"Mon, 01 Dec 2014 16:04:35 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+    http_version: 
+  recorded_at: Mon, 01 Dec 2014 22:04:35 GMT
+- request:
+    method: post
+    uri: https://api.wheniwork.com/2/shifts
+    body:
+      encoding: UTF-8
+      string: '{"location_id":343075,"start_time":"2014-12-01 13:00:00 -0600","end_time":"2014-12-01
+        17:00:00 -0600","notes":"Shift 0/13"}'
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Mon, 01 Dec 2014 22:04:36 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"shift":{"id":81189703,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Mon,
+        01 Dec 2014 13:00:00 -0600","end_time":"Mon, 01 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        0\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
+        01 Dec 2014 16:04:36 -0600","updated_at":"Mon, 01 Dec 2014 16:04:36 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+    http_version: 
+  recorded_at: Mon, 01 Dec 2014 22:04:36 GMT
+- request:
+    method: post
+    uri: https://api.wheniwork.com/2/shifts
+    body:
+      encoding: UTF-8
+      string: '{"location_id":343075,"start_time":"2014-12-02 08:00:00 -0600","end_time":"2014-12-02
+        12:00:00 -0600","notes":"Shift 1/8"}'
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Mon, 01 Dec 2014 22:04:36 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"shift":{"id":81189709,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Tue,
+        02 Dec 2014 08:00:00 -0600","end_time":"Tue, 02 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        1\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
+        01 Dec 2014 16:04:36 -0600","updated_at":"Mon, 01 Dec 2014 16:04:36 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+    http_version: 
+  recorded_at: Mon, 01 Dec 2014 22:04:37 GMT
+- request:
+    method: post
+    uri: https://api.wheniwork.com/2/shifts
+    body:
+      encoding: UTF-8
+      string: '{"location_id":343075,"start_time":"2014-12-02 13:00:00 -0600","end_time":"2014-12-02
+        17:00:00 -0600","notes":"Shift 1/13"}'
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Mon, 01 Dec 2014 22:04:37 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"shift":{"id":81189718,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Tue,
+        02 Dec 2014 13:00:00 -0600","end_time":"Tue, 02 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        1\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
+        01 Dec 2014 16:04:37 -0600","updated_at":"Mon, 01 Dec 2014 16:04:37 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+    http_version: 
+  recorded_at: Mon, 01 Dec 2014 22:04:37 GMT
+- request:
+    method: post
+    uri: https://api.wheniwork.com/2/shifts
+    body:
+      encoding: UTF-8
+      string: '{"location_id":343075,"start_time":"2014-12-03 08:00:00 -0600","end_time":"2014-12-03
+        12:00:00 -0600","notes":"Shift 2/8"}'
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Mon, 01 Dec 2014 22:04:38 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"shift":{"id":81189721,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Wed,
+        03 Dec 2014 08:00:00 -0600","end_time":"Wed, 03 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        2\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
+        01 Dec 2014 16:04:38 -0600","updated_at":"Mon, 01 Dec 2014 16:04:38 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+    http_version: 
+  recorded_at: Mon, 01 Dec 2014 22:04:38 GMT
+- request:
+    method: post
+    uri: https://api.wheniwork.com/2/shifts
+    body:
+      encoding: UTF-8
+      string: '{"location_id":343075,"start_time":"2014-12-03 13:00:00 -0600","end_time":"2014-12-03
+        17:00:00 -0600","notes":"Shift 2/13"}'
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Mon, 01 Dec 2014 22:04:39 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"shift":{"id":81189733,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Wed,
+        03 Dec 2014 13:00:00 -0600","end_time":"Wed, 03 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        2\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
+        01 Dec 2014 16:04:39 -0600","updated_at":"Mon, 01 Dec 2014 16:04:39 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+    http_version: 
+  recorded_at: Mon, 01 Dec 2014 22:04:39 GMT
+- request:
+    method: post
+    uri: https://api.wheniwork.com/2/shifts
+    body:
+      encoding: UTF-8
+      string: '{"location_id":343075,"start_time":"2014-12-04 08:00:00 -0600","end_time":"2014-12-04
+        12:00:00 -0600","notes":"Shift 3/8"}'
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Mon, 01 Dec 2014 22:04:40 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"shift":{"id":81189802,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Thu,
+        04 Dec 2014 08:00:00 -0600","end_time":"Thu, 04 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        3\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
+        01 Dec 2014 16:04:40 -0600","updated_at":"Mon, 01 Dec 2014 16:04:40 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+    http_version: 
+  recorded_at: Mon, 01 Dec 2014 22:04:40 GMT
+- request:
+    method: post
+    uri: https://api.wheniwork.com/2/shifts
+    body:
+      encoding: UTF-8
+      string: '{"location_id":343075,"start_time":"2014-12-04 13:00:00 -0600","end_time":"2014-12-04
+        17:00:00 -0600","notes":"Shift 3/13"}'
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Mon, 01 Dec 2014 22:04:41 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"shift":{"id":81189817,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Thu,
+        04 Dec 2014 13:00:00 -0600","end_time":"Thu, 04 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        3\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
+        01 Dec 2014 16:04:41 -0600","updated_at":"Mon, 01 Dec 2014 16:04:41 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+    http_version: 
+  recorded_at: Mon, 01 Dec 2014 22:04:41 GMT
+- request:
+    method: post
+    uri: https://api.wheniwork.com/2/shifts
+    body:
+      encoding: UTF-8
+      string: '{"location_id":343075,"start_time":"2014-12-05 08:00:00 -0600","end_time":"2014-12-05
+        12:00:00 -0600","notes":"Shift 4/8"}'
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Mon, 01 Dec 2014 22:04:42 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"shift":{"id":81189826,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Fri,
+        05 Dec 2014 08:00:00 -0600","end_time":"Fri, 05 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        4\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
+        01 Dec 2014 16:04:42 -0600","updated_at":"Mon, 01 Dec 2014 16:04:42 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+    http_version: 
+  recorded_at: Mon, 01 Dec 2014 22:04:42 GMT
+- request:
+    method: post
+    uri: https://api.wheniwork.com/2/shifts
+    body:
+      encoding: UTF-8
+      string: '{"location_id":343075,"start_time":"2014-12-05 13:00:00 -0600","end_time":"2014-12-05
+        17:00:00 -0600","notes":"Shift 4/13"}'
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Mon, 01 Dec 2014 22:04:42 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"shift":{"id":81189835,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Fri,
+        05 Dec 2014 13:00:00 -0600","end_time":"Fri, 05 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        4\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
+        01 Dec 2014 16:04:42 -0600","updated_at":"Mon, 01 Dec 2014 16:04:42 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+    http_version: 
+  recorded_at: Mon, 01 Dec 2014 22:04:43 GMT
+- request:
+    method: post
+    uri: https://api.wheniwork.com/2/shifts
+    body:
+      encoding: UTF-8
+      string: '{"location_id":343075,"start_time":"2014-12-06 08:00:00 -0600","end_time":"2014-12-06
+        12:00:00 -0600","notes":"Shift 5/8"}'
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Mon, 01 Dec 2014 22:04:43 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"shift":{"id":81189844,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sat,
+        06 Dec 2014 08:00:00 -0600","end_time":"Sat, 06 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        5\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
+        01 Dec 2014 16:04:43 -0600","updated_at":"Mon, 01 Dec 2014 16:04:43 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+    http_version: 
+  recorded_at: Mon, 01 Dec 2014 22:04:43 GMT
+- request:
+    method: post
+    uri: https://api.wheniwork.com/2/shifts
+    body:
+      encoding: UTF-8
+      string: '{"location_id":343075,"start_time":"2014-12-06 13:00:00 -0600","end_time":"2014-12-06
+        17:00:00 -0600","notes":"Shift 5/13"}'
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Mon, 01 Dec 2014 22:04:44 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"shift":{"id":81189859,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sat,
+        06 Dec 2014 13:00:00 -0600","end_time":"Sat, 06 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        5\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
+        01 Dec 2014 16:04:44 -0600","updated_at":"Mon, 01 Dec 2014 16:04:44 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+    http_version: 
+  recorded_at: Mon, 01 Dec 2014 22:04:44 GMT
+- request:
+    method: post
+    uri: https://api.wheniwork.com/2/shifts
+    body:
+      encoding: UTF-8
+      string: '{"location_id":343075,"start_time":"2014-12-07 08:00:00 -0600","end_time":"2014-12-07
+        12:00:00 -0600","notes":"Shift 6/8"}'
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Mon, 01 Dec 2014 22:04:45 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"shift":{"id":81189871,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sun,
+        07 Dec 2014 08:00:00 -0600","end_time":"Sun, 07 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        6\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
+        01 Dec 2014 16:04:45 -0600","updated_at":"Mon, 01 Dec 2014 16:04:45 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+    http_version: 
+  recorded_at: Mon, 01 Dec 2014 22:04:45 GMT
+- request:
+    method: post
+    uri: https://api.wheniwork.com/2/shifts
+    body:
+      encoding: UTF-8
+      string: '{"location_id":343075,"start_time":"2014-12-07 13:00:00 -0600","end_time":"2014-12-07
+        17:00:00 -0600","notes":"Shift 6/13"}'
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Mon, 01 Dec 2014 22:04:46 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"shift":{"id":81189874,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sun,
+        07 Dec 2014 13:00:00 -0600","end_time":"Sun, 07 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        6\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
+        01 Dec 2014 16:04:46 -0600","updated_at":"Mon, 01 Dec 2014 16:04:46 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+    http_version: 
+  recorded_at: Mon, 01 Dec 2014 22:04:46 GMT
+- request:
+    method: get
+    uri: https://api.wheniwork.com/2/shifts?end=2014-12-08%2000:00:00%20-0600&location_id=343075&start=2014-12-01%2000:00:00%20-0600
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Mon, 01 Dec 2014 22:04:47 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      W-Limit-Remaining:
+      - '99'
+    body:
+      encoding: UTF-8
+      string: '{"start":"Mon, 01 Dec 2014 00:00:00 -0600","end":"Mon, 08 Dec 2014
+        00:00:00 -0600","shifts":[]}'
+    http_version: 
+  recorded_at: Mon, 01 Dec 2014 22:04:47 GMT
+recorded_with: VCR 2.9.3
