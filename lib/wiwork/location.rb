@@ -1,7 +1,9 @@
 module WhenIWork
   class Location < WIWAPIObject
 
-    attr_reader :id, :name, :address, :coordinates, :created_at, :updated_at
+    readable_attributes = [:id, :name, :address, :coordinates, :created_at, :updated_at]
+
+    attr_reader *readable_attributes
 
     def self.date_time_attributes
       []

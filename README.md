@@ -54,7 +54,7 @@ The methods:
 
 #### Locations
 
-  * locations -> array of WhenIWork::Location objects
+  * locations() -> array of WhenIWork::Location objects
   * get_location(id) -> WhenIWork::Location
   * create_location(hash_of_attributes) -> WhenIWork::Location
   * update_location(hash_of_attributes) -> WhenIWork::Location
@@ -70,9 +70,36 @@ When specifying latitude and longitude in a create_location or update_location c
 
 Note than any use of any of the locations methods will result in *wiwork* eager loading all the locations from the API. Subsequent calls to any of the read-only locations methods (locations, get_location) will be handled out of *wiwork*'s cache created on the first hit.
 
+#### Shifts
+
+  * shifts(options) -> array of WhenIWork::Location objects
+    - options (hash)
+      + start (date) (WhenIWork API doc says datetime, but only date works)
+      + end (date)
+      + location_id (integer)
+    - options not shown in the WhenIWork API doc
+      + unpublished=false (boolean) (include unpublished shifts)
+      + include_allopen=false (boolean) (include open shifts)
+  * get_shift(id) -> WhenIWork::Shift
+  * create\_shift(hash_of_attributes) -> WhenIWork::Shift
+  * update\_shift(hash_of_attributes) -> WhenIWork::Shift
+  * publish_shifts(ids) -> boolean
+    the *ids* parameter can be a single integer id or an array of same
+  * unpublish_shifts(ids) -> boolean
+    (as above, can unpublish one or more)
+  * delete_shift(id) -> boolean
+
 ### Logging
 
-[Some general info about logging here.]
+*wiwork* can log all its requests, responses, and connection initiations. Logging is off by default. To turn it on, include the following configuration block:
+
+    WhenIWork.configure do |config|
+      config.logging = true
+    end
+
+If a `logger` object is defined (such as Rails' `ActiveSupport::Logger`), *wiwork* will log to that object. Otherwise, simple `puts` statement will be issued.
+
+Turning on logging is a great way to debug any problems you might be having with the API.
 
 ## Notes
 

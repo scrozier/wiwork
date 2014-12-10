@@ -24,23 +24,14 @@ module WhenIWork
     end
 
     def wiwapi(verb, url_end, query=nil, body=nil)
+      # this catches errors where caller provided a request body for a GET
+      raise WhenIWork::WIWorkError, "GET with request body disallowed" if body && verb == :get
+
       options = {}
       options[:headers] = {"W-Token" => @token} # required for all API hits
-
       query_string = (query ? assemble_query_string(query) : '')
-
       options[:body] = body.to_json if body     # this handles params for POSTs and PUTs
-
-      log_request(verb, url_end, query_string, options) if WhenIWork.configuration.logging
-      response = HTTParty.send(verb, BASE_URL + url_end + query_string, options)
-      log_response(response) if WhenIWork.configuration.logging
-
-      parsed_response = response.parsed_response
-      if response.code != 200
-        raise WhenIWork::WIWAPIError, "#{parsed_response['code']} #{parsed_response['error']}"
-      end
-      
-      return parsed_response
+      return get_api_response(verb, url_end, query_string, options)
     end
 
     private
@@ -88,17 +79,40 @@ module WhenIWork
       items = []
       query.each do |k, v|
         if v.respond_to?(:each)
-          item_string = "#{k}=#{v.join(',')}"
+          normalized_values = v.collect{|val| normalize_query_value(val)}
+          item_string = "#{k}=#{normalized_values.join(',')}"
         else
-          item_string = "#{k}=#{v}"
+          item_string = "#{k}=#{normalize_query_value(v)}"
         end
         items << item_string
       end
-      encoded_query_string = URI.encode('?' + items.join('&'))
-      puts "*** query_string: #{encoded_query_string}"
+      encoded_query_string = URI.encode('/?' + items.join('&'))
       return encoded_query_string
-    end      
+    end
 
+    # do any Ruby -> WIW API conversions that are called for
+    def normalize_query_value(value)
+      if value.is_a?(Time) || value.is_a?(DateTime)
+        return WhenIWork::DateTimeFormatter.for_query(value)
+      elsif value.is_a? Date
+        return WhenIWork::DateFormatter.for_query(value)
+      else
+        return value
+      end
+    end
+
+    def get_api_response(verb, url_end, query_string, options)
+      log_request(verb, url_end, query_string, options) if WhenIWork.configuration.logging
+      response = HTTParty.send(verb, BASE_URL + url_end + query_string, options)
+      log_response(response) if WhenIWork.configuration.logging
+
+      parsed_response = response.parsed_response
+      if response.code != 200
+        raise WhenIWork::WIWAPIError, "#{parsed_response['code']} #{parsed_response['error']}"
+      end
+      
+      return parsed_response
+    end
   end
 
 end

@@ -17,7 +17,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:22 GMT
+      - Thu, 04 Dec 2014 23:47:59 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -38,7 +38,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"error":"No location found","code":"4003"}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:22 GMT
+  recorded_at: Thu, 04 Dec 2014 23:47:59 GMT
 - request:
     method: get
     uri: https://api.wheniwork.com/2/locations
@@ -56,7 +56,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:23 GMT
+      - Thu, 04 Dec 2014 23:47:59 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -78,9 +78,9 @@ http_interactions:
       string: '{"locations":[{"id":343075,"account_id":193849,"is_default":0,"name":"New
         York Headquarters (Empire State Building)","sort":0,"max_hours":0,"address":"350
         5th Ave, New York, NY 10118","coordinates":[40.748238,-73.985184],"latitude":40.748238,"longitude":-73.985184,"ip_address":"","created_at":"Sun,
-        30 Nov 2014 13:21:31 -0600","updated_at":"Mon, 01 Dec 2014 15:59:37 -0600","is_deleted":false,"radius":100}]}'
+        30 Nov 2014 13:21:31 -0600","updated_at":"Thu, 04 Dec 2014 17:31:03 -0600","is_deleted":false,"radius":100}]}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:23 GMT
+  recorded_at: Thu, 04 Dec 2014 23:47:59 GMT
 - request:
     method: put
     uri: https://api.wheniwork.com/2/locations/343075
@@ -99,7 +99,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:23 GMT
+      - Thu, 04 Dec 2014 23:48:00 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -119,9 +119,9 @@ http_interactions:
       string: '{"location":{"id":343075,"account_id":193849,"is_default":0,"name":"New
         York Headquarters (Empire State Building)","sort":0,"max_hours":0,"address":"350
         5th Ave, New York, NY 10118","coordinates":[40.748238,-73.985184],"latitude":40.748238,"longitude":-73.985184,"ip_address":"","created_at":"Sun,
-        30 Nov 2014 13:21:31 -0600","updated_at":"Mon, 01 Dec 2014 16:04:23 -0600","is_deleted":false,"radius":100}}'
+        30 Nov 2014 13:21:31 -0600","updated_at":"Thu, 04 Dec 2014 17:48:00 -0600","is_deleted":false,"radius":100}}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:24 GMT
+  recorded_at: Thu, 04 Dec 2014 23:48:00 GMT
 - request:
     method: post
     uri: https://api.wheniwork.com/2/locations
@@ -140,7 +140,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:24 GMT
+      - Thu, 04 Dec 2014 23:48:00 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -157,11 +157,11 @@ http_interactions:
       - Origin, X-Requested-With, Content-Type, Accept
     body:
       encoding: UTF-8
-      string: '{"location":{"id":344302,"account_id":193849,"is_default":0,"name":"Southeast
-        Operations","sort":0,"max_hours":0,"address":"1 Lodge St, Asheville, NC 28803","coordinates":[],"latitude":null,"longitude":null,"ip_address":"","created_at":"Mon,
-        01 Dec 2014 10:04:24 -0600","updated_at":"Mon, 01 Dec 2014 16:04:24 -0600","is_deleted":false}}'
+      string: '{"location":{"id":350137,"account_id":193849,"is_default":0,"name":"Southeast
+        Operations","sort":0,"max_hours":0,"address":"1 Lodge St, Asheville, NC 28803","coordinates":[],"latitude":null,"longitude":null,"ip_address":"","created_at":"Thu,
+        04 Dec 2014 11:48:00 -0600","updated_at":"Thu, 04 Dec 2014 17:48:00 -0600","is_deleted":false}}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:24 GMT
+  recorded_at: Thu, 04 Dec 2014 23:48:00 GMT
 - request:
     method: get
     uri: https://api.wheniwork.com/2/locations/1
@@ -179,7 +179,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:25 GMT
+      - Thu, 04 Dec 2014 23:48:00 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -200,7 +200,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"error":"No location found","code":"4003"}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:25 GMT
+  recorded_at: Thu, 04 Dec 2014 23:48:00 GMT
 - request:
     method: get
     uri: https://api.wheniwork.com/2/locations
@@ -218,7 +218,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:26 GMT
+      - Thu, 04 Dec 2014 23:48:01 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -240,14 +240,14 @@ http_interactions:
       string: '{"locations":[{"id":343075,"account_id":193849,"is_default":0,"name":"New
         York Headquarters (Empire State Building)","sort":0,"max_hours":0,"address":"350
         5th Ave, New York, NY 10118","coordinates":[40.748238,-73.985184],"latitude":40.748238,"longitude":-73.985184,"ip_address":"","created_at":"Sun,
-        30 Nov 2014 13:21:31 -0600","updated_at":"Mon, 01 Dec 2014 16:04:23 -0600","is_deleted":false,"radius":100},{"id":344302,"account_id":193849,"is_default":0,"name":"Southeast
-        Operations","sort":0,"max_hours":0,"address":"1 Lodge St, Asheville, NC 28803","coordinates":[],"latitude":0,"longitude":0,"ip_address":"","created_at":"Mon,
-        01 Dec 2014 10:04:24 -0600","updated_at":"Mon, 01 Dec 2014 16:04:24 -0600","is_deleted":false}]}'
+        30 Nov 2014 13:21:31 -0600","updated_at":"Thu, 04 Dec 2014 17:48:00 -0600","is_deleted":false,"radius":100},{"id":350137,"account_id":193849,"is_default":0,"name":"Southeast
+        Operations","sort":0,"max_hours":0,"address":"1 Lodge St, Asheville, NC 28803","coordinates":[],"latitude":0,"longitude":0,"ip_address":"","created_at":"Thu,
+        04 Dec 2014 11:48:00 -0600","updated_at":"Thu, 04 Dec 2014 17:48:00 -0600","is_deleted":false}]}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:26 GMT
+  recorded_at: Thu, 04 Dec 2014 23:48:01 GMT
 - request:
     method: put
-    uri: https://api.wheniwork.com/2/locations/344302
+    uri: https://api.wheniwork.com/2/locations/350137
     body:
       encoding: UTF-8
       string: '{"name":"Western Operations","address":"1500 Orange Ave, Coronado,
@@ -263,7 +263,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:27 GMT
+      - Thu, 04 Dec 2014 23:48:01 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -280,12 +280,12 @@ http_interactions:
       - Origin, X-Requested-With, Content-Type, Accept
     body:
       encoding: UTF-8
-      string: '{"location":{"id":344302,"account_id":193849,"is_default":0,"name":"Western
+      string: '{"location":{"id":350137,"account_id":193849,"is_default":0,"name":"Western
         Operations","sort":0,"max_hours":0,"address":"1500 Orange Ave, Coronado, CA
-        92118","coordinates":[],"latitude":0,"longitude":0,"ip_address":"","created_at":"Mon,
-        01 Dec 2014 10:04:24 -0600","updated_at":"Mon, 01 Dec 2014 16:04:27 -0600","is_deleted":false}}'
+        92118","coordinates":[],"latitude":0,"longitude":0,"ip_address":"","created_at":"Thu,
+        04 Dec 2014 11:48:00 -0600","updated_at":"Thu, 04 Dec 2014 17:48:01 -0600","is_deleted":false}}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:27 GMT
+  recorded_at: Thu, 04 Dec 2014 23:48:01 GMT
 - request:
     method: get
     uri: https://api.wheniwork.com/2/locations/1
@@ -303,7 +303,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:27 GMT
+      - Thu, 04 Dec 2014 23:48:01 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -324,7 +324,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"error":"No location found","code":"4003"}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:28 GMT
+  recorded_at: Thu, 04 Dec 2014 23:48:01 GMT
 - request:
     method: get
     uri: https://api.wheniwork.com/2/locations
@@ -342,7 +342,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:28 GMT
+      - Thu, 04 Dec 2014 23:48:02 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -364,15 +364,15 @@ http_interactions:
       string: '{"locations":[{"id":343075,"account_id":193849,"is_default":0,"name":"New
         York Headquarters (Empire State Building)","sort":0,"max_hours":0,"address":"350
         5th Ave, New York, NY 10118","coordinates":[40.748238,-73.985184],"latitude":40.748238,"longitude":-73.985184,"ip_address":"","created_at":"Sun,
-        30 Nov 2014 13:21:31 -0600","updated_at":"Mon, 01 Dec 2014 16:04:23 -0600","is_deleted":false,"radius":100},{"id":344302,"account_id":193849,"is_default":0,"name":"Western
+        30 Nov 2014 13:21:31 -0600","updated_at":"Thu, 04 Dec 2014 17:48:00 -0600","is_deleted":false,"radius":100},{"id":350137,"account_id":193849,"is_default":0,"name":"Western
         Operations","sort":0,"max_hours":0,"address":"1500 Orange Ave, Coronado, CA
-        92118","coordinates":[],"latitude":0,"longitude":0,"ip_address":"","created_at":"Mon,
-        01 Dec 2014 10:04:24 -0600","updated_at":"Mon, 01 Dec 2014 16:04:27 -0600","is_deleted":false}]}'
+        92118","coordinates":[],"latitude":0,"longitude":0,"ip_address":"","created_at":"Thu,
+        04 Dec 2014 11:48:00 -0600","updated_at":"Thu, 04 Dec 2014 17:48:01 -0600","is_deleted":false}]}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:28 GMT
+  recorded_at: Thu, 04 Dec 2014 23:48:02 GMT
 - request:
     method: delete
-    uri: https://api.wheniwork.com/2/locations/344302
+    uri: https://api.wheniwork.com/2/locations/350137
     body:
       encoding: US-ASCII
       string: ''
@@ -387,7 +387,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:29 GMT
+      - Thu, 04 Dec 2014 23:48:02 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -406,7 +406,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"success":true}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:29 GMT
+  recorded_at: Thu, 04 Dec 2014 23:48:02 GMT
 - request:
     method: get
     uri: https://api.wheniwork.com/2/locations/1
@@ -424,7 +424,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:30 GMT
+      - Thu, 04 Dec 2014 23:48:02 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -445,7 +445,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"error":"No location found","code":"4003"}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:30 GMT
+  recorded_at: Thu, 04 Dec 2014 23:48:02 GMT
 - request:
     method: get
     uri: https://api.wheniwork.com/2/locations
@@ -463,7 +463,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:31 GMT
+      - Thu, 04 Dec 2014 23:48:03 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -485,7 +485,7 @@ http_interactions:
       string: '{"locations":[{"id":343075,"account_id":193849,"is_default":0,"name":"New
         York Headquarters (Empire State Building)","sort":0,"max_hours":0,"address":"350
         5th Ave, New York, NY 10118","coordinates":[40.748238,-73.985184],"latitude":40.748238,"longitude":-73.985184,"ip_address":"","created_at":"Sun,
-        30 Nov 2014 13:21:31 -0600","updated_at":"Mon, 01 Dec 2014 16:04:23 -0600","is_deleted":false,"radius":100}]}'
+        30 Nov 2014 13:21:31 -0600","updated_at":"Thu, 04 Dec 2014 17:48:00 -0600","is_deleted":false,"radius":100}]}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:31 GMT
+  recorded_at: Thu, 04 Dec 2014 23:48:03 GMT
 recorded_with: VCR 2.9.3

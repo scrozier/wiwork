@@ -17,7 +17,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:32 GMT
+      - Fri, 05 Dec 2014 23:17:10 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -38,7 +38,7 @@ http_interactions:
       encoding: UTF-8
       string: '{"error":"No location found","code":"4003"}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:32 GMT
+  recorded_at: Fri, 05 Dec 2014 23:17:10 GMT
 - request:
     method: get
     uri: https://api.wheniwork.com/2/locations
@@ -56,7 +56,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:32 GMT
+      - Fri, 05 Dec 2014 23:17:11 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -78,12 +78,12 @@ http_interactions:
       string: '{"locations":[{"id":343075,"account_id":193849,"is_default":0,"name":"New
         York Headquarters (Empire State Building)","sort":0,"max_hours":0,"address":"350
         5th Ave, New York, NY 10118","coordinates":[40.748238,-73.985184],"latitude":40.748238,"longitude":-73.985184,"ip_address":"","created_at":"Sun,
-        30 Nov 2014 13:21:31 -0600","updated_at":"Mon, 01 Dec 2014 16:04:23 -0600","is_deleted":false,"radius":100}]}'
+        30 Nov 2014 13:21:31 -0600","updated_at":"Thu, 04 Dec 2014 17:48:00 -0600","is_deleted":false,"radius":100}]}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:32 GMT
+  recorded_at: Fri, 05 Dec 2014 23:17:11 GMT
 - request:
     method: get
-    uri: https://api.wheniwork.com/2/shifts?end=2014-12-08%2000:00:00%20-0600&location_id=343075&start=2014-12-01%2000:00:00%20-0600
+    uri: https://api.wheniwork.com/2/shifts/?end=2015-12-05&include_allopen=true&location_id=343075&start=2013-12-05&unpublished=true
     body:
       encoding: US-ASCII
       string: ''
@@ -98,7 +98,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:33 GMT
+      - Fri, 05 Dec 2014 23:17:12 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -117,13 +117,72 @@ http_interactions:
       - '99'
     body:
       encoding: UTF-8
-      string: '{"start":"Mon, 01 Dec 2014 00:00:00 -0600","end":"Mon, 08 Dec 2014
-        00:00:00 -0600","shifts":[]}'
+      string: '{"start":"Thu, 05 Dec 2013 00:00:00 -0600","end":"Sat, 05 Dec 2015
+        00:00:00 -0600","shifts":[{"id":82760180,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Fri,
+        05 Dec 2014 08:00:00 -0600","end_time":"Fri, 05 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        0\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:16:05 -0600","updated_at":"Fri, 05 Dec 2014 17:16:05 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760240,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Fri,
+        05 Dec 2014 13:00:00 -0600","end_time":"Fri, 05 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        0\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":true,"published_date":"Fri,
+        05 Dec 2014 17:16:24 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:16:06 -0600","updated_at":"Fri, 05 Dec 2014 17:16:24 -0600","acknowledged":0,"is_open":true,"actionable":true,"block_id":0},{"id":82760246,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sat,
+        06 Dec 2014 08:00:00 -0600","end_time":"Sat, 06 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        1\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":true,"published_date":"Fri,
+        05 Dec 2014 17:16:24 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:16:07 -0600","updated_at":"Fri, 05 Dec 2014 17:16:24 -0600","acknowledged":0,"is_open":true,"actionable":true,"block_id":0},{"id":82760249,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sat,
+        06 Dec 2014 13:00:00 -0600","end_time":"Sat, 06 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        1\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Fri,
+        05 Dec 2014 17:16:25 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:16:07 -0600","updated_at":"Fri, 05 Dec 2014 17:16:29 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760255,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sun,
+        07 Dec 2014 08:00:00 -0600","end_time":"Sun, 07 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        2\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:16:08 -0600","updated_at":"Fri, 05 Dec 2014 17:16:08 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760258,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sun,
+        07 Dec 2014 13:00:00 -0600","end_time":"Sun, 07 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        2\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:16:09 -0600","updated_at":"Fri, 05 Dec 2014 17:16:09 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760264,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Mon,
+        08 Dec 2014 08:00:00 -0600","end_time":"Mon, 08 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        3\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:16:10 -0600","updated_at":"Fri, 05 Dec 2014 17:16:10 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760270,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Mon,
+        08 Dec 2014 13:00:00 -0600","end_time":"Mon, 08 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        3\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:16:11 -0600","updated_at":"Fri, 05 Dec 2014 17:16:11 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760279,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Tue,
+        09 Dec 2014 08:00:00 -0600","end_time":"Tue, 09 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        4\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:16:12 -0600","updated_at":"Fri, 05 Dec 2014 17:16:12 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760285,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Tue,
+        09 Dec 2014 13:00:00 -0600","end_time":"Tue, 09 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        4\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:16:14 -0600","updated_at":"Fri, 05 Dec 2014 17:16:14 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760288,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Wed,
+        10 Dec 2014 08:00:00 -0600","end_time":"Wed, 10 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        5\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:16:16 -0600","updated_at":"Fri, 05 Dec 2014 17:16:16 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760297,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Wed,
+        10 Dec 2014 13:00:00 -0600","end_time":"Wed, 10 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        5\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:16:17 -0600","updated_at":"Fri, 05 Dec 2014 17:16:17 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760306,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Thu,
+        11 Dec 2014 08:00:00 -0600","end_time":"Thu, 11 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        6\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:16:18 -0600","updated_at":"Fri, 05 Dec 2014 17:16:18 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760309,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Thu,
+        11 Dec 2014 13:00:00 -0600","end_time":"Thu, 11 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        6\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:16:19 -0600","updated_at":"Fri, 05 Dec 2014 17:16:19 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}],"locations":[{"id":343075,"account_id":193849,"is_default":0,"name":"New
+        York Headquarters (Empire State Building)","sort":0,"max_hours":0,"address":"350
+        5th Ave, New York, NY 10118","coordinates":[40.748238,-73.985184],"latitude":40.748238,"longitude":-73.985184,"ip_address":"","created_at":"Sun,
+        30 Nov 2014 13:21:31 -0600","updated_at":"Thu, 04 Dec 2014 17:48:00 -0600","is_deleted":false,"radius":100}]}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:33 GMT
+  recorded_at: Fri, 05 Dec 2014 23:17:12 GMT
 - request:
-    method: get
-    uri: https://api.wheniwork.com/2/shifts?end=2014-12-08%2000:00:00%20-0600&location_id=343075&start=2014-12-01%2000:00:00%20-0600
+    method: delete
+    uri: https://api.wheniwork.com/2/shifts/82760180
     body:
       encoding: US-ASCII
       string: ''
@@ -138,7 +197,525 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:34 GMT
+      - Fri, 05 Dec 2014 23:17:14 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"success":true}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:14 GMT
+- request:
+    method: delete
+    uri: https://api.wheniwork.com/2/shifts/82760240
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:15 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"success":true}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:15 GMT
+- request:
+    method: delete
+    uri: https://api.wheniwork.com/2/shifts/82760246
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:16 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"success":true}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:16 GMT
+- request:
+    method: delete
+    uri: https://api.wheniwork.com/2/shifts/82760249
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:17 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"success":true}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:17 GMT
+- request:
+    method: delete
+    uri: https://api.wheniwork.com/2/shifts/82760255
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:18 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"success":true}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:18 GMT
+- request:
+    method: delete
+    uri: https://api.wheniwork.com/2/shifts/82760258
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:19 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"success":true}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:19 GMT
+- request:
+    method: delete
+    uri: https://api.wheniwork.com/2/shifts/82760264
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:19 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"success":true}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:19 GMT
+- request:
+    method: delete
+    uri: https://api.wheniwork.com/2/shifts/82760270
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:20 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"success":true}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:20 GMT
+- request:
+    method: delete
+    uri: https://api.wheniwork.com/2/shifts/82760279
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:21 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"success":true}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:21 GMT
+- request:
+    method: delete
+    uri: https://api.wheniwork.com/2/shifts/82760285
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:22 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"success":true}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:22 GMT
+- request:
+    method: delete
+    uri: https://api.wheniwork.com/2/shifts/82760288
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:23 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"success":true}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:23 GMT
+- request:
+    method: delete
+    uri: https://api.wheniwork.com/2/shifts/82760297
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:24 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"success":true}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:24 GMT
+- request:
+    method: delete
+    uri: https://api.wheniwork.com/2/shifts/82760306
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:25 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"success":true}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:25 GMT
+- request:
+    method: delete
+    uri: https://api.wheniwork.com/2/shifts/82760309
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:26 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"success":true}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:26 GMT
+- request:
+    method: get
+    uri: https://api.wheniwork.com/2/shifts/?end=2015-12-05&include_allopen=true&location_id=343075&start=2013-12-05&unpublished=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:27 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -157,16 +734,16 @@ http_interactions:
       - '99'
     body:
       encoding: UTF-8
-      string: '{"start":"Mon, 01 Dec 2014 00:00:00 -0600","end":"Mon, 08 Dec 2014
+      string: '{"start":"Thu, 05 Dec 2013 00:00:00 -0600","end":"Sat, 05 Dec 2015
         00:00:00 -0600","shifts":[]}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:34 GMT
+  recorded_at: Fri, 05 Dec 2014 23:17:27 GMT
 - request:
     method: post
     uri: https://api.wheniwork.com/2/shifts
     body:
       encoding: UTF-8
-      string: '{"location_id":343075,"start_time":"2014-12-01 08:00:00 -0600","end_time":"2014-12-01
+      string: '{"location_id":343075,"start_time":"2014-12-05 08:00:00 -0600","end_time":"2014-12-05
         12:00:00 -0600","notes":"Shift 0/8"}'
     headers:
       W-Token:
@@ -179,7 +756,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:35 GMT
+      - Fri, 05 Dec 2014 23:17:28 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -196,19 +773,19 @@ http_interactions:
       - Origin, X-Requested-With, Content-Type, Accept
     body:
       encoding: UTF-8
-      string: '{"shift":{"id":81189691,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Mon,
-        01 Dec 2014 08:00:00 -0600","end_time":"Mon, 01 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+      string: '{"shift":{"id":82760789,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Fri,
+        05 Dec 2014 08:00:00 -0600","end_time":"Fri, 05 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
         0\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
-        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
-        01 Dec 2014 16:04:35 -0600","updated_at":"Mon, 01 Dec 2014 16:04:35 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:28 -0600","updated_at":"Fri, 05 Dec 2014 17:17:28 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:35 GMT
+  recorded_at: Fri, 05 Dec 2014 23:17:28 GMT
 - request:
     method: post
     uri: https://api.wheniwork.com/2/shifts
     body:
       encoding: UTF-8
-      string: '{"location_id":343075,"start_time":"2014-12-01 13:00:00 -0600","end_time":"2014-12-01
+      string: '{"location_id":343075,"start_time":"2014-12-05 13:00:00 -0600","end_time":"2014-12-05
         17:00:00 -0600","notes":"Shift 0/13"}'
     headers:
       W-Token:
@@ -221,7 +798,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:36 GMT
+      - Fri, 05 Dec 2014 23:17:29 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -238,19 +815,19 @@ http_interactions:
       - Origin, X-Requested-With, Content-Type, Accept
     body:
       encoding: UTF-8
-      string: '{"shift":{"id":81189703,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Mon,
-        01 Dec 2014 13:00:00 -0600","end_time":"Mon, 01 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+      string: '{"shift":{"id":82760798,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Fri,
+        05 Dec 2014 13:00:00 -0600","end_time":"Fri, 05 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
         0\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
-        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
-        01 Dec 2014 16:04:36 -0600","updated_at":"Mon, 01 Dec 2014 16:04:36 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:29 -0600","updated_at":"Fri, 05 Dec 2014 17:17:29 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:36 GMT
+  recorded_at: Fri, 05 Dec 2014 23:17:29 GMT
 - request:
     method: post
     uri: https://api.wheniwork.com/2/shifts
     body:
       encoding: UTF-8
-      string: '{"location_id":343075,"start_time":"2014-12-02 08:00:00 -0600","end_time":"2014-12-02
+      string: '{"location_id":343075,"start_time":"2014-12-06 08:00:00 -0600","end_time":"2014-12-06
         12:00:00 -0600","notes":"Shift 1/8"}'
     headers:
       W-Token:
@@ -263,7 +840,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:36 GMT
+      - Fri, 05 Dec 2014 23:17:30 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -280,19 +857,19 @@ http_interactions:
       - Origin, X-Requested-With, Content-Type, Accept
     body:
       encoding: UTF-8
-      string: '{"shift":{"id":81189709,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Tue,
-        02 Dec 2014 08:00:00 -0600","end_time":"Tue, 02 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+      string: '{"shift":{"id":82760801,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sat,
+        06 Dec 2014 08:00:00 -0600","end_time":"Sat, 06 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
         1\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
-        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
-        01 Dec 2014 16:04:36 -0600","updated_at":"Mon, 01 Dec 2014 16:04:36 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:30 -0600","updated_at":"Fri, 05 Dec 2014 17:17:30 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:37 GMT
+  recorded_at: Fri, 05 Dec 2014 23:17:30 GMT
 - request:
     method: post
     uri: https://api.wheniwork.com/2/shifts
     body:
       encoding: UTF-8
-      string: '{"location_id":343075,"start_time":"2014-12-02 13:00:00 -0600","end_time":"2014-12-02
+      string: '{"location_id":343075,"start_time":"2014-12-06 13:00:00 -0600","end_time":"2014-12-06
         17:00:00 -0600","notes":"Shift 1/13"}'
     headers:
       W-Token:
@@ -305,7 +882,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:37 GMT
+      - Fri, 05 Dec 2014 23:17:30 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -322,19 +899,19 @@ http_interactions:
       - Origin, X-Requested-With, Content-Type, Accept
     body:
       encoding: UTF-8
-      string: '{"shift":{"id":81189718,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Tue,
-        02 Dec 2014 13:00:00 -0600","end_time":"Tue, 02 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+      string: '{"shift":{"id":82760804,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sat,
+        06 Dec 2014 13:00:00 -0600","end_time":"Sat, 06 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
         1\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
-        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
-        01 Dec 2014 16:04:37 -0600","updated_at":"Mon, 01 Dec 2014 16:04:37 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:30 -0600","updated_at":"Fri, 05 Dec 2014 17:17:30 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:37 GMT
+  recorded_at: Fri, 05 Dec 2014 23:17:30 GMT
 - request:
     method: post
     uri: https://api.wheniwork.com/2/shifts
     body:
       encoding: UTF-8
-      string: '{"location_id":343075,"start_time":"2014-12-03 08:00:00 -0600","end_time":"2014-12-03
+      string: '{"location_id":343075,"start_time":"2014-12-07 08:00:00 -0600","end_time":"2014-12-07
         12:00:00 -0600","notes":"Shift 2/8"}'
     headers:
       W-Token:
@@ -347,7 +924,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:38 GMT
+      - Fri, 05 Dec 2014 23:17:31 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -364,19 +941,19 @@ http_interactions:
       - Origin, X-Requested-With, Content-Type, Accept
     body:
       encoding: UTF-8
-      string: '{"shift":{"id":81189721,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Wed,
-        03 Dec 2014 08:00:00 -0600","end_time":"Wed, 03 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+      string: '{"shift":{"id":82760807,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sun,
+        07 Dec 2014 08:00:00 -0600","end_time":"Sun, 07 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
         2\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
-        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
-        01 Dec 2014 16:04:38 -0600","updated_at":"Mon, 01 Dec 2014 16:04:38 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:31 -0600","updated_at":"Fri, 05 Dec 2014 17:17:31 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:38 GMT
+  recorded_at: Fri, 05 Dec 2014 23:17:31 GMT
 - request:
     method: post
     uri: https://api.wheniwork.com/2/shifts
     body:
       encoding: UTF-8
-      string: '{"location_id":343075,"start_time":"2014-12-03 13:00:00 -0600","end_time":"2014-12-03
+      string: '{"location_id":343075,"start_time":"2014-12-07 13:00:00 -0600","end_time":"2014-12-07
         17:00:00 -0600","notes":"Shift 2/13"}'
     headers:
       W-Token:
@@ -389,7 +966,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:39 GMT
+      - Fri, 05 Dec 2014 23:17:32 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -406,19 +983,19 @@ http_interactions:
       - Origin, X-Requested-With, Content-Type, Accept
     body:
       encoding: UTF-8
-      string: '{"shift":{"id":81189733,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Wed,
-        03 Dec 2014 13:00:00 -0600","end_time":"Wed, 03 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+      string: '{"shift":{"id":82760810,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sun,
+        07 Dec 2014 13:00:00 -0600","end_time":"Sun, 07 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
         2\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
-        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
-        01 Dec 2014 16:04:39 -0600","updated_at":"Mon, 01 Dec 2014 16:04:39 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:32 -0600","updated_at":"Fri, 05 Dec 2014 17:17:32 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:39 GMT
+  recorded_at: Fri, 05 Dec 2014 23:17:32 GMT
 - request:
     method: post
     uri: https://api.wheniwork.com/2/shifts
     body:
       encoding: UTF-8
-      string: '{"location_id":343075,"start_time":"2014-12-04 08:00:00 -0600","end_time":"2014-12-04
+      string: '{"location_id":343075,"start_time":"2014-12-08 08:00:00 -0600","end_time":"2014-12-08
         12:00:00 -0600","notes":"Shift 3/8"}'
     headers:
       W-Token:
@@ -431,7 +1008,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:40 GMT
+      - Fri, 05 Dec 2014 23:17:33 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -448,19 +1025,19 @@ http_interactions:
       - Origin, X-Requested-With, Content-Type, Accept
     body:
       encoding: UTF-8
-      string: '{"shift":{"id":81189802,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Thu,
-        04 Dec 2014 08:00:00 -0600","end_time":"Thu, 04 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+      string: '{"shift":{"id":82760813,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Mon,
+        08 Dec 2014 08:00:00 -0600","end_time":"Mon, 08 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
         3\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
-        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
-        01 Dec 2014 16:04:40 -0600","updated_at":"Mon, 01 Dec 2014 16:04:40 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:33 -0600","updated_at":"Fri, 05 Dec 2014 17:17:33 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:40 GMT
+  recorded_at: Fri, 05 Dec 2014 23:17:33 GMT
 - request:
     method: post
     uri: https://api.wheniwork.com/2/shifts
     body:
       encoding: UTF-8
-      string: '{"location_id":343075,"start_time":"2014-12-04 13:00:00 -0600","end_time":"2014-12-04
+      string: '{"location_id":343075,"start_time":"2014-12-08 13:00:00 -0600","end_time":"2014-12-08
         17:00:00 -0600","notes":"Shift 3/13"}'
     headers:
       W-Token:
@@ -473,7 +1050,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:41 GMT
+      - Fri, 05 Dec 2014 23:17:34 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -490,19 +1067,19 @@ http_interactions:
       - Origin, X-Requested-With, Content-Type, Accept
     body:
       encoding: UTF-8
-      string: '{"shift":{"id":81189817,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Thu,
-        04 Dec 2014 13:00:00 -0600","end_time":"Thu, 04 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+      string: '{"shift":{"id":82760819,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Mon,
+        08 Dec 2014 13:00:00 -0600","end_time":"Mon, 08 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
         3\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
-        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
-        01 Dec 2014 16:04:41 -0600","updated_at":"Mon, 01 Dec 2014 16:04:41 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:34 -0600","updated_at":"Fri, 05 Dec 2014 17:17:34 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:41 GMT
+  recorded_at: Fri, 05 Dec 2014 23:17:34 GMT
 - request:
     method: post
     uri: https://api.wheniwork.com/2/shifts
     body:
       encoding: UTF-8
-      string: '{"location_id":343075,"start_time":"2014-12-05 08:00:00 -0600","end_time":"2014-12-05
+      string: '{"location_id":343075,"start_time":"2014-12-09 08:00:00 -0600","end_time":"2014-12-09
         12:00:00 -0600","notes":"Shift 4/8"}'
     headers:
       W-Token:
@@ -515,7 +1092,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:42 GMT
+      - Fri, 05 Dec 2014 23:17:35 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -532,19 +1109,19 @@ http_interactions:
       - Origin, X-Requested-With, Content-Type, Accept
     body:
       encoding: UTF-8
-      string: '{"shift":{"id":81189826,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Fri,
-        05 Dec 2014 08:00:00 -0600","end_time":"Fri, 05 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+      string: '{"shift":{"id":82760822,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Tue,
+        09 Dec 2014 08:00:00 -0600","end_time":"Tue, 09 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
         4\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
-        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
-        01 Dec 2014 16:04:42 -0600","updated_at":"Mon, 01 Dec 2014 16:04:42 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:35 -0600","updated_at":"Fri, 05 Dec 2014 17:17:35 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:42 GMT
+  recorded_at: Fri, 05 Dec 2014 23:17:35 GMT
 - request:
     method: post
     uri: https://api.wheniwork.com/2/shifts
     body:
       encoding: UTF-8
-      string: '{"location_id":343075,"start_time":"2014-12-05 13:00:00 -0600","end_time":"2014-12-05
+      string: '{"location_id":343075,"start_time":"2014-12-09 13:00:00 -0600","end_time":"2014-12-09
         17:00:00 -0600","notes":"Shift 4/13"}'
     headers:
       W-Token:
@@ -557,7 +1134,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:42 GMT
+      - Fri, 05 Dec 2014 23:17:36 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -574,19 +1151,19 @@ http_interactions:
       - Origin, X-Requested-With, Content-Type, Accept
     body:
       encoding: UTF-8
-      string: '{"shift":{"id":81189835,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Fri,
-        05 Dec 2014 13:00:00 -0600","end_time":"Fri, 05 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+      string: '{"shift":{"id":82760828,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Tue,
+        09 Dec 2014 13:00:00 -0600","end_time":"Tue, 09 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
         4\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
-        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
-        01 Dec 2014 16:04:42 -0600","updated_at":"Mon, 01 Dec 2014 16:04:42 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:36 -0600","updated_at":"Fri, 05 Dec 2014 17:17:36 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:43 GMT
+  recorded_at: Fri, 05 Dec 2014 23:17:36 GMT
 - request:
     method: post
     uri: https://api.wheniwork.com/2/shifts
     body:
       encoding: UTF-8
-      string: '{"location_id":343075,"start_time":"2014-12-06 08:00:00 -0600","end_time":"2014-12-06
+      string: '{"location_id":343075,"start_time":"2014-12-10 08:00:00 -0600","end_time":"2014-12-10
         12:00:00 -0600","notes":"Shift 5/8"}'
     headers:
       W-Token:
@@ -599,7 +1176,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:43 GMT
+      - Fri, 05 Dec 2014 23:17:37 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -616,19 +1193,19 @@ http_interactions:
       - Origin, X-Requested-With, Content-Type, Accept
     body:
       encoding: UTF-8
-      string: '{"shift":{"id":81189844,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sat,
-        06 Dec 2014 08:00:00 -0600","end_time":"Sat, 06 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+      string: '{"shift":{"id":82760834,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Wed,
+        10 Dec 2014 08:00:00 -0600","end_time":"Wed, 10 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
         5\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
-        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
-        01 Dec 2014 16:04:43 -0600","updated_at":"Mon, 01 Dec 2014 16:04:43 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:37 -0600","updated_at":"Fri, 05 Dec 2014 17:17:37 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:43 GMT
+  recorded_at: Fri, 05 Dec 2014 23:17:37 GMT
 - request:
     method: post
     uri: https://api.wheniwork.com/2/shifts
     body:
       encoding: UTF-8
-      string: '{"location_id":343075,"start_time":"2014-12-06 13:00:00 -0600","end_time":"2014-12-06
+      string: '{"location_id":343075,"start_time":"2014-12-10 13:00:00 -0600","end_time":"2014-12-10
         17:00:00 -0600","notes":"Shift 5/13"}'
     headers:
       W-Token:
@@ -641,7 +1218,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:44 GMT
+      - Fri, 05 Dec 2014 23:17:38 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -658,19 +1235,19 @@ http_interactions:
       - Origin, X-Requested-With, Content-Type, Accept
     body:
       encoding: UTF-8
-      string: '{"shift":{"id":81189859,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sat,
-        06 Dec 2014 13:00:00 -0600","end_time":"Sat, 06 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+      string: '{"shift":{"id":82760840,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Wed,
+        10 Dec 2014 13:00:00 -0600","end_time":"Wed, 10 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
         5\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
-        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
-        01 Dec 2014 16:04:44 -0600","updated_at":"Mon, 01 Dec 2014 16:04:44 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:38 -0600","updated_at":"Fri, 05 Dec 2014 17:17:38 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:44 GMT
+  recorded_at: Fri, 05 Dec 2014 23:17:38 GMT
 - request:
     method: post
     uri: https://api.wheniwork.com/2/shifts
     body:
       encoding: UTF-8
-      string: '{"location_id":343075,"start_time":"2014-12-07 08:00:00 -0600","end_time":"2014-12-07
+      string: '{"location_id":343075,"start_time":"2014-12-11 08:00:00 -0600","end_time":"2014-12-11
         12:00:00 -0600","notes":"Shift 6/8"}'
     headers:
       W-Token:
@@ -683,7 +1260,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:45 GMT
+      - Fri, 05 Dec 2014 23:17:39 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -700,19 +1277,19 @@ http_interactions:
       - Origin, X-Requested-With, Content-Type, Accept
     body:
       encoding: UTF-8
-      string: '{"shift":{"id":81189871,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sun,
-        07 Dec 2014 08:00:00 -0600","end_time":"Sun, 07 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+      string: '{"shift":{"id":82760843,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Thu,
+        11 Dec 2014 08:00:00 -0600","end_time":"Thu, 11 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
         6\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
-        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
-        01 Dec 2014 16:04:45 -0600","updated_at":"Mon, 01 Dec 2014 16:04:45 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:39 -0600","updated_at":"Fri, 05 Dec 2014 17:17:39 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:45 GMT
+  recorded_at: Fri, 05 Dec 2014 23:17:39 GMT
 - request:
     method: post
     uri: https://api.wheniwork.com/2/shifts
     body:
       encoding: UTF-8
-      string: '{"location_id":343075,"start_time":"2014-12-07 13:00:00 -0600","end_time":"2014-12-07
+      string: '{"location_id":343075,"start_time":"2014-12-11 13:00:00 -0600","end_time":"2014-12-11
         17:00:00 -0600","notes":"Shift 6/13"}'
     headers:
       W-Token:
@@ -725,7 +1302,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:46 GMT
+      - Fri, 05 Dec 2014 23:17:40 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -742,16 +1319,16 @@ http_interactions:
       - Origin, X-Requested-With, Content-Type, Accept
     body:
       encoding: UTF-8
-      string: '{"shift":{"id":81189874,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sun,
-        07 Dec 2014 13:00:00 -0600","end_time":"Sun, 07 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+      string: '{"shift":{"id":82760864,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Thu,
+        11 Dec 2014 13:00:00 -0600","end_time":"Thu, 11 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
         6\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
-        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Mon,
-        01 Dec 2014 16:04:46 -0600","updated_at":"Mon, 01 Dec 2014 16:04:46 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:40 -0600","updated_at":"Fri, 05 Dec 2014 17:17:40 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:46 GMT
+  recorded_at: Fri, 05 Dec 2014 23:17:40 GMT
 - request:
     method: get
-    uri: https://api.wheniwork.com/2/shifts?end=2014-12-08%2000:00:00%20-0600&location_id=343075&start=2014-12-01%2000:00:00%20-0600
+    uri: https://api.wheniwork.com/2/shifts/?end=2015-12-05&include_allopen=true&location_id=343075&start=2013-12-05&unpublished=true
     body:
       encoding: US-ASCII
       string: ''
@@ -766,7 +1343,7 @@ http_interactions:
       Server:
       - nginx/1.6.2
       Date:
-      - Mon, 01 Dec 2014 22:04:47 GMT
+      - Fri, 05 Dec 2014 23:17:41 GMT
       Content-Type:
       - application/json
       Transfer-Encoding:
@@ -785,8 +1362,621 @@ http_interactions:
       - '99'
     body:
       encoding: UTF-8
-      string: '{"start":"Mon, 01 Dec 2014 00:00:00 -0600","end":"Mon, 08 Dec 2014
+      string: '{"start":"Thu, 05 Dec 2013 00:00:00 -0600","end":"Sat, 05 Dec 2015
+        00:00:00 -0600","shifts":[{"id":82760789,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Fri,
+        05 Dec 2014 08:00:00 -0600","end_time":"Fri, 05 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        0\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:28 -0600","updated_at":"Fri, 05 Dec 2014 17:17:28 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760798,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Fri,
+        05 Dec 2014 13:00:00 -0600","end_time":"Fri, 05 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        0\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:29 -0600","updated_at":"Fri, 05 Dec 2014 17:17:29 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760801,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sat,
+        06 Dec 2014 08:00:00 -0600","end_time":"Sat, 06 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        1\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:30 -0600","updated_at":"Fri, 05 Dec 2014 17:17:30 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760804,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sat,
+        06 Dec 2014 13:00:00 -0600","end_time":"Sat, 06 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        1\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:30 -0600","updated_at":"Fri, 05 Dec 2014 17:17:30 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760807,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sun,
+        07 Dec 2014 08:00:00 -0600","end_time":"Sun, 07 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        2\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:31 -0600","updated_at":"Fri, 05 Dec 2014 17:17:31 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760810,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sun,
+        07 Dec 2014 13:00:00 -0600","end_time":"Sun, 07 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        2\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:32 -0600","updated_at":"Fri, 05 Dec 2014 17:17:32 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760813,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Mon,
+        08 Dec 2014 08:00:00 -0600","end_time":"Mon, 08 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        3\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:33 -0600","updated_at":"Fri, 05 Dec 2014 17:17:33 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760819,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Mon,
+        08 Dec 2014 13:00:00 -0600","end_time":"Mon, 08 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        3\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:34 -0600","updated_at":"Fri, 05 Dec 2014 17:17:34 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760822,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Tue,
+        09 Dec 2014 08:00:00 -0600","end_time":"Tue, 09 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        4\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:35 -0600","updated_at":"Fri, 05 Dec 2014 17:17:35 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760828,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Tue,
+        09 Dec 2014 13:00:00 -0600","end_time":"Tue, 09 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        4\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:36 -0600","updated_at":"Fri, 05 Dec 2014 17:17:36 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760834,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Wed,
+        10 Dec 2014 08:00:00 -0600","end_time":"Wed, 10 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        5\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:37 -0600","updated_at":"Fri, 05 Dec 2014 17:17:37 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760840,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Wed,
+        10 Dec 2014 13:00:00 -0600","end_time":"Wed, 10 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        5\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:38 -0600","updated_at":"Fri, 05 Dec 2014 17:17:38 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760843,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Thu,
+        11 Dec 2014 08:00:00 -0600","end_time":"Thu, 11 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        6\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:39 -0600","updated_at":"Fri, 05 Dec 2014 17:17:39 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760864,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Thu,
+        11 Dec 2014 13:00:00 -0600","end_time":"Thu, 11 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        6\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:40 -0600","updated_at":"Fri, 05 Dec 2014 17:17:40 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}],"locations":[{"id":343075,"account_id":193849,"is_default":0,"name":"New
+        York Headquarters (Empire State Building)","sort":0,"max_hours":0,"address":"350
+        5th Ave, New York, NY 10118","coordinates":[40.748238,-73.985184],"latitude":40.748238,"longitude":-73.985184,"ip_address":"","created_at":"Sun,
+        30 Nov 2014 13:21:31 -0600","updated_at":"Thu, 04 Dec 2014 17:48:00 -0600","is_deleted":false,"radius":100}]}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:41 GMT
+- request:
+    method: get
+    uri: https://api.wheniwork.com/2/shifts/?end=2015-12-05&include_allopen=true&location_id=343075&start=2013-12-05&unpublished=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:42 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      W-Limit-Remaining:
+      - '99'
+    body:
+      encoding: UTF-8
+      string: '{"start":"Thu, 05 Dec 2013 00:00:00 -0600","end":"Sat, 05 Dec 2015
         00:00:00 -0600","shifts":[]}'
     http_version: 
-  recorded_at: Mon, 01 Dec 2014 22:04:47 GMT
+  recorded_at: Fri, 05 Dec 2014 23:17:42 GMT
+- request:
+    method: get
+    uri: https://api.wheniwork.com/2/shifts/?end=2015-12-05&include_allopen=true&location_id=343075&start=2013-12-05&unpublished=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:43 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      W-Limit-Remaining:
+      - '99'
+    body:
+      encoding: UTF-8
+      string: '{"start":"Thu, 05 Dec 2013 00:00:00 -0600","end":"Sat, 05 Dec 2015
+        00:00:00 -0600","shifts":[{"id":82760789,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Fri,
+        05 Dec 2014 08:00:00 -0600","end_time":"Fri, 05 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        0\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:28 -0600","updated_at":"Fri, 05 Dec 2014 17:17:28 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760798,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Fri,
+        05 Dec 2014 13:00:00 -0600","end_time":"Fri, 05 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        0\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:29 -0600","updated_at":"Fri, 05 Dec 2014 17:17:29 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760801,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sat,
+        06 Dec 2014 08:00:00 -0600","end_time":"Sat, 06 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        1\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:30 -0600","updated_at":"Fri, 05 Dec 2014 17:17:30 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760804,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sat,
+        06 Dec 2014 13:00:00 -0600","end_time":"Sat, 06 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        1\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:30 -0600","updated_at":"Fri, 05 Dec 2014 17:17:30 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760807,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sun,
+        07 Dec 2014 08:00:00 -0600","end_time":"Sun, 07 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        2\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:31 -0600","updated_at":"Fri, 05 Dec 2014 17:17:31 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760810,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sun,
+        07 Dec 2014 13:00:00 -0600","end_time":"Sun, 07 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        2\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:32 -0600","updated_at":"Fri, 05 Dec 2014 17:17:32 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760813,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Mon,
+        08 Dec 2014 08:00:00 -0600","end_time":"Mon, 08 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        3\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:33 -0600","updated_at":"Fri, 05 Dec 2014 17:17:33 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760819,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Mon,
+        08 Dec 2014 13:00:00 -0600","end_time":"Mon, 08 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        3\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:34 -0600","updated_at":"Fri, 05 Dec 2014 17:17:34 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760822,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Tue,
+        09 Dec 2014 08:00:00 -0600","end_time":"Tue, 09 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        4\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:35 -0600","updated_at":"Fri, 05 Dec 2014 17:17:35 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760828,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Tue,
+        09 Dec 2014 13:00:00 -0600","end_time":"Tue, 09 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        4\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:36 -0600","updated_at":"Fri, 05 Dec 2014 17:17:36 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760834,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Wed,
+        10 Dec 2014 08:00:00 -0600","end_time":"Wed, 10 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        5\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:37 -0600","updated_at":"Fri, 05 Dec 2014 17:17:37 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760840,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Wed,
+        10 Dec 2014 13:00:00 -0600","end_time":"Wed, 10 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        5\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:38 -0600","updated_at":"Fri, 05 Dec 2014 17:17:38 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760843,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Thu,
+        11 Dec 2014 08:00:00 -0600","end_time":"Thu, 11 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        6\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:39 -0600","updated_at":"Fri, 05 Dec 2014 17:17:39 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760864,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Thu,
+        11 Dec 2014 13:00:00 -0600","end_time":"Thu, 11 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        6\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:40 -0600","updated_at":"Fri, 05 Dec 2014 17:17:40 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}],"locations":[{"id":343075,"account_id":193849,"is_default":0,"name":"New
+        York Headquarters (Empire State Building)","sort":0,"max_hours":0,"address":"350
+        5th Ave, New York, NY 10118","coordinates":[40.748238,-73.985184],"latitude":40.748238,"longitude":-73.985184,"ip_address":"","created_at":"Sun,
+        30 Nov 2014 13:21:31 -0600","updated_at":"Thu, 04 Dec 2014 17:48:00 -0600","is_deleted":false,"radius":100}]}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:43 GMT
+- request:
+    method: post
+    uri: https://api.wheniwork.com/2/shifts/publish
+    body:
+      encoding: UTF-8
+      string: '{"ids":[82760798,82760801]}'
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:45 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"success":true}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:45 GMT
+- request:
+    method: post
+    uri: https://api.wheniwork.com/2/shifts/publish
+    body:
+      encoding: UTF-8
+      string: '{"ids":[82760804]}'
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:46 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"success":true}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:46 GMT
+- request:
+    method: get
+    uri: https://api.wheniwork.com/2/shifts/?end=2015-12-05&include_allopen=true&location_id=343075&start=2013-12-05&unpublished=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:47 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      W-Limit-Remaining:
+      - '99'
+    body:
+      encoding: UTF-8
+      string: '{"start":"Thu, 05 Dec 2013 00:00:00 -0600","end":"Sat, 05 Dec 2015
+        00:00:00 -0600","shifts":[{"id":82760798,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Fri,
+        05 Dec 2014 13:00:00 -0600","end_time":"Fri, 05 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        0\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":true,"published_date":"Fri,
+        05 Dec 2014 17:17:45 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:29 -0600","updated_at":"Fri, 05 Dec 2014 17:17:45 -0600","acknowledged":0,"is_open":true,"actionable":true,"block_id":0},{"id":82760801,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sat,
+        06 Dec 2014 08:00:00 -0600","end_time":"Sat, 06 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        1\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":true,"published_date":"Fri,
+        05 Dec 2014 17:17:45 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:30 -0600","updated_at":"Fri, 05 Dec 2014 17:17:45 -0600","acknowledged":0,"is_open":true,"actionable":true,"block_id":0},{"id":82760804,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sat,
+        06 Dec 2014 13:00:00 -0600","end_time":"Sat, 06 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        1\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":true,"published_date":"Fri,
+        05 Dec 2014 17:17:46 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:30 -0600","updated_at":"Fri, 05 Dec 2014 17:17:46 -0600","acknowledged":0,"is_open":true,"actionable":true,"block_id":0}],"locations":[{"id":343075,"account_id":193849,"is_default":0,"name":"New
+        York Headquarters (Empire State Building)","sort":0,"max_hours":0,"address":"350
+        5th Ave, New York, NY 10118","coordinates":[40.748238,-73.985184],"latitude":40.748238,"longitude":-73.985184,"ip_address":"","created_at":"Sun,
+        30 Nov 2014 13:21:31 -0600","updated_at":"Thu, 04 Dec 2014 17:48:00 -0600","is_deleted":false,"radius":100}]}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:47 GMT
+- request:
+    method: get
+    uri: https://api.wheniwork.com/2/shifts/?end=2015-12-05&include_allopen=true&location_id=343075&start=2013-12-05&unpublished=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:48 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      W-Limit-Remaining:
+      - '99'
+    body:
+      encoding: UTF-8
+      string: '{"start":"Thu, 05 Dec 2013 00:00:00 -0600","end":"Sat, 05 Dec 2015
+        00:00:00 -0600","shifts":[{"id":82760789,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Fri,
+        05 Dec 2014 08:00:00 -0600","end_time":"Fri, 05 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        0\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:28 -0600","updated_at":"Fri, 05 Dec 2014 17:17:28 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760798,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Fri,
+        05 Dec 2014 13:00:00 -0600","end_time":"Fri, 05 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        0\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":true,"published_date":"Fri,
+        05 Dec 2014 17:17:45 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:29 -0600","updated_at":"Fri, 05 Dec 2014 17:17:45 -0600","acknowledged":0,"is_open":true,"actionable":true,"block_id":0},{"id":82760801,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sat,
+        06 Dec 2014 08:00:00 -0600","end_time":"Sat, 06 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        1\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":true,"published_date":"Fri,
+        05 Dec 2014 17:17:45 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:30 -0600","updated_at":"Fri, 05 Dec 2014 17:17:45 -0600","acknowledged":0,"is_open":true,"actionable":true,"block_id":0},{"id":82760804,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sat,
+        06 Dec 2014 13:00:00 -0600","end_time":"Sat, 06 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        1\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":true,"published_date":"Fri,
+        05 Dec 2014 17:17:46 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:30 -0600","updated_at":"Fri, 05 Dec 2014 17:17:46 -0600","acknowledged":0,"is_open":true,"actionable":true,"block_id":0},{"id":82760807,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sun,
+        07 Dec 2014 08:00:00 -0600","end_time":"Sun, 07 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        2\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:31 -0600","updated_at":"Fri, 05 Dec 2014 17:17:31 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760810,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sun,
+        07 Dec 2014 13:00:00 -0600","end_time":"Sun, 07 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        2\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:32 -0600","updated_at":"Fri, 05 Dec 2014 17:17:32 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760813,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Mon,
+        08 Dec 2014 08:00:00 -0600","end_time":"Mon, 08 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        3\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:33 -0600","updated_at":"Fri, 05 Dec 2014 17:17:33 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760819,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Mon,
+        08 Dec 2014 13:00:00 -0600","end_time":"Mon, 08 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        3\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:34 -0600","updated_at":"Fri, 05 Dec 2014 17:17:34 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760822,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Tue,
+        09 Dec 2014 08:00:00 -0600","end_time":"Tue, 09 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        4\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:35 -0600","updated_at":"Fri, 05 Dec 2014 17:17:35 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760828,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Tue,
+        09 Dec 2014 13:00:00 -0600","end_time":"Tue, 09 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        4\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:36 -0600","updated_at":"Fri, 05 Dec 2014 17:17:36 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760834,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Wed,
+        10 Dec 2014 08:00:00 -0600","end_time":"Wed, 10 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        5\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:37 -0600","updated_at":"Fri, 05 Dec 2014 17:17:37 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760840,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Wed,
+        10 Dec 2014 13:00:00 -0600","end_time":"Wed, 10 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        5\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:38 -0600","updated_at":"Fri, 05 Dec 2014 17:17:38 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760843,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Thu,
+        11 Dec 2014 08:00:00 -0600","end_time":"Thu, 11 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        6\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:39 -0600","updated_at":"Fri, 05 Dec 2014 17:17:39 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760864,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Thu,
+        11 Dec 2014 13:00:00 -0600","end_time":"Thu, 11 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        6\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:40 -0600","updated_at":"Fri, 05 Dec 2014 17:17:40 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}],"locations":[{"id":343075,"account_id":193849,"is_default":0,"name":"New
+        York Headquarters (Empire State Building)","sort":0,"max_hours":0,"address":"350
+        5th Ave, New York, NY 10118","coordinates":[40.748238,-73.985184],"latitude":40.748238,"longitude":-73.985184,"ip_address":"","created_at":"Sun,
+        30 Nov 2014 13:21:31 -0600","updated_at":"Thu, 04 Dec 2014 17:48:00 -0600","is_deleted":false,"radius":100}]}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:48 GMT
+- request:
+    method: post
+    uri: https://api.wheniwork.com/2/shifts/unpublish
+    body:
+      encoding: UTF-8
+      string: '{"ids":[82760804]}'
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:49 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+    body:
+      encoding: UTF-8
+      string: '{"success":true}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:49 GMT
+- request:
+    method: get
+    uri: https://api.wheniwork.com/2/shifts/?end=2015-12-05&include_allopen=true&location_id=343075&start=2013-12-05&unpublished=false
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:53 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      W-Limit-Remaining:
+      - '99'
+    body:
+      encoding: UTF-8
+      string: '{"start":"Thu, 05 Dec 2013 00:00:00 -0600","end":"Sat, 05 Dec 2015
+        00:00:00 -0600","shifts":[{"id":82760798,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Fri,
+        05 Dec 2014 13:00:00 -0600","end_time":"Fri, 05 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        0\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":true,"published_date":"Fri,
+        05 Dec 2014 17:17:45 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:29 -0600","updated_at":"Fri, 05 Dec 2014 17:17:45 -0600","acknowledged":0,"is_open":true,"actionable":true,"block_id":0},{"id":82760801,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sat,
+        06 Dec 2014 08:00:00 -0600","end_time":"Sat, 06 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        1\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":true,"published_date":"Fri,
+        05 Dec 2014 17:17:45 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:30 -0600","updated_at":"Fri, 05 Dec 2014 17:17:45 -0600","acknowledged":0,"is_open":true,"actionable":true,"block_id":0}],"locations":[{"id":343075,"account_id":193849,"is_default":0,"name":"New
+        York Headquarters (Empire State Building)","sort":0,"max_hours":0,"address":"350
+        5th Ave, New York, NY 10118","coordinates":[40.748238,-73.985184],"latitude":40.748238,"longitude":-73.985184,"ip_address":"","created_at":"Sun,
+        30 Nov 2014 13:21:31 -0600","updated_at":"Thu, 04 Dec 2014 17:48:00 -0600","is_deleted":false,"radius":100}]}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:53 GMT
+- request:
+    method: get
+    uri: https://api.wheniwork.com/2/shifts/?end=2015-12-05&include_allopen=true&location_id=343075&start=2013-12-05&unpublished=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      W-Token:
+      - a822bf37a7c6597a2a0d5d1a83838aac31715a5f
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx/1.6.2
+      Date:
+      - Fri, 05 Dec 2014 23:17:54 GMT
+      Content-Type:
+      - application/json
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Access-Control-Allow-Origin:
+      - "*"
+      Cache-Control:
+      - no-cache
+      Access-Control-Allow-Methods:
+      - GET, POST, PUT, PATCH, DELETE, OPTIONS
+      Access-Control-Allow-Headers:
+      - Origin, X-Requested-With, Content-Type, Accept
+      W-Limit-Remaining:
+      - '99'
+    body:
+      encoding: UTF-8
+      string: '{"start":"Thu, 05 Dec 2013 00:00:00 -0600","end":"Sat, 05 Dec 2015
+        00:00:00 -0600","shifts":[{"id":82760789,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Fri,
+        05 Dec 2014 08:00:00 -0600","end_time":"Fri, 05 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        0\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:28 -0600","updated_at":"Fri, 05 Dec 2014 17:17:28 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760798,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Fri,
+        05 Dec 2014 13:00:00 -0600","end_time":"Fri, 05 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        0\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":true,"published_date":"Fri,
+        05 Dec 2014 17:17:45 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:29 -0600","updated_at":"Fri, 05 Dec 2014 17:17:45 -0600","acknowledged":0,"is_open":true,"actionable":true,"block_id":0},{"id":82760801,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sat,
+        06 Dec 2014 08:00:00 -0600","end_time":"Sat, 06 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        1\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":true,"published_date":"Fri,
+        05 Dec 2014 17:17:45 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:30 -0600","updated_at":"Fri, 05 Dec 2014 17:17:45 -0600","acknowledged":0,"is_open":true,"actionable":true,"block_id":0},{"id":82760804,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sat,
+        06 Dec 2014 13:00:00 -0600","end_time":"Sat, 06 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        1\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Fri,
+        05 Dec 2014 17:17:46 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:30 -0600","updated_at":"Fri, 05 Dec 2014 17:17:49 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760807,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sun,
+        07 Dec 2014 08:00:00 -0600","end_time":"Sun, 07 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        2\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:31 -0600","updated_at":"Fri, 05 Dec 2014 17:17:31 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760810,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Sun,
+        07 Dec 2014 13:00:00 -0600","end_time":"Sun, 07 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        2\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:32 -0600","updated_at":"Fri, 05 Dec 2014 17:17:32 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760813,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Mon,
+        08 Dec 2014 08:00:00 -0600","end_time":"Mon, 08 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        3\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:33 -0600","updated_at":"Fri, 05 Dec 2014 17:17:33 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760819,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Mon,
+        08 Dec 2014 13:00:00 -0600","end_time":"Mon, 08 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        3\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:34 -0600","updated_at":"Fri, 05 Dec 2014 17:17:34 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760822,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Tue,
+        09 Dec 2014 08:00:00 -0600","end_time":"Tue, 09 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        4\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:35 -0600","updated_at":"Fri, 05 Dec 2014 17:17:35 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760828,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Tue,
+        09 Dec 2014 13:00:00 -0600","end_time":"Tue, 09 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        4\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:36 -0600","updated_at":"Fri, 05 Dec 2014 17:17:36 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760834,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Wed,
+        10 Dec 2014 08:00:00 -0600","end_time":"Wed, 10 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        5\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:37 -0600","updated_at":"Fri, 05 Dec 2014 17:17:37 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760840,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Wed,
+        10 Dec 2014 13:00:00 -0600","end_time":"Wed, 10 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        5\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:38 -0600","updated_at":"Fri, 05 Dec 2014 17:17:38 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760843,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Thu,
+        11 Dec 2014 08:00:00 -0600","end_time":"Thu, 11 Dec 2014 12:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        6\/8","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:39 -0600","updated_at":"Fri, 05 Dec 2014 17:17:39 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0},{"id":82760864,"account_id":193849,"user_id":0,"location_id":343075,"position_id":0,"site_id":0,"start_time":"Thu,
+        11 Dec 2014 13:00:00 -0600","end_time":"Thu, 11 Dec 2014 17:00:00 -0600","break_time":0,"color":"cccccc","notes":"Shift
+        6\/13","alerted":false,"linked_users":null,"shiftchain_key":"","published":false,"published_date":"Tue,
+        29 Nov -001 18:00:00 -0600","notified_at":"Tue, 29 Nov -001 18:00:00 -0600","instances":1,"created_at":"Fri,
+        05 Dec 2014 17:17:40 -0600","updated_at":"Fri, 05 Dec 2014 17:17:40 -0600","acknowledged":0,"is_open":true,"actionable":false,"block_id":0}],"locations":[{"id":343075,"account_id":193849,"is_default":0,"name":"New
+        York Headquarters (Empire State Building)","sort":0,"max_hours":0,"address":"350
+        5th Ave, New York, NY 10118","coordinates":[40.748238,-73.985184],"latitude":40.748238,"longitude":-73.985184,"ip_address":"","created_at":"Sun,
+        30 Nov 2014 13:21:31 -0600","updated_at":"Thu, 04 Dec 2014 17:48:00 -0600","is_deleted":false,"radius":100}]}'
+    http_version: 
+  recorded_at: Fri, 05 Dec 2014 23:17:54 GMT
 recorded_with: VCR 2.9.3
